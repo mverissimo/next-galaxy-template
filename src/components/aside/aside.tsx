@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import NAV from './aside.constants';
 
 function Aside() {
-  const router = useRouter();
+  let router = useRouter();
 
   return (
     <aside

@@ -9,7 +9,7 @@ interface ArticleProps extends HTMLAttributes<HTMLElement> {
 }
 
 function Article(props: ArticleProps) {
-  const { frontmatter, children } = props;
+  let { frontmatter, children } = props;
 
   return (
     <React.Fragment>

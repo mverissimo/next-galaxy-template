@@ -6,7 +6,7 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 }
 
 function Heading(props: HeadingProps) {
-  const { id, level = 1, children } = props;
+  let { id, level = 1, children } = props;
 
   return React.createElement(
     `h${level}`,

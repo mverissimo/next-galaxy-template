@@ -5,6 +5,7 @@ import '@fontsource/inter/700.css';
 import '@/styles/main.css';
 
 import React from 'react';
+import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
 import { Header } from '@/components/header';
@@ -15,6 +16,20 @@ function MyApp(props: AppProps) {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Next-docs</title>
+
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+        />
+        <meta
+          name="description"
+          content="build your own documentation page with nextjs and markdoc"
+        />
+      </Head>
       <Header />
       <main
         className="

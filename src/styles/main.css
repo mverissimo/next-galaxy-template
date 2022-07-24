@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+article {
+  @apply w-full 
+    max-w-none
+    
+    prose
+    prose-slate;
+}

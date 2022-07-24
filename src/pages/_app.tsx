@@ -10,6 +10,7 @@ import type { AppProps } from 'next/app';
 
 import { Header } from '@/components/header';
 import { Aside } from '@/components/aside';
+import { Article } from '@/components/article';
 
 function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
@@ -31,25 +32,34 @@ function MyApp(props: AppProps) {
         />
       </Head>
       <Header />
-      <main
+      <div
         className="
-          flex
-          relative
-      
           px-4
-          sm:px-6
-          
-          mx-auto
       
           w-full
-          h-full
           max-w-full
-          lg:max-w-8xl
+          mx-auto
+      
+          lg:flex
+          xl:max-w-8xl
         "
       >
         <Aside />
-        <Component {...pageProps} />
-      </main>
+        <main
+          className="
+          flex-auto
+
+          py-12
+          max-w-4xl
+    
+          lg:px-12
+        "
+        >
+          <Article frontmatter={pageProps.markdoc.frontmatter}>
+            <Component {...pageProps} />
+          </Article>
+        </main>
+      </div>
     </React.Fragment>
   );
 }

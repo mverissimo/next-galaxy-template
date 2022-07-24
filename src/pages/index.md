@@ -1,6 +1,11 @@
 ---
-title: Get started with Markdoc
-description: How to get started with Markdoc
+title: Badge
+description: Badges are used to highlight an item's status for quick recognition.
+source: true #show source code button
 ---
 
-# Get started with Markdoc
+## Import
+
+```tsx
+import { Badge } from '@backyard-ui/core';
+```

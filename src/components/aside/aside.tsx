@@ -37,8 +37,9 @@ function Aside() {
 
           overflow-y-auto
 
-          px-4
-          py-8
+          pr-4
+          pl-4
+          py-12
 
           bg-white
 
@@ -46,7 +47,8 @@ function Aside() {
           lg:top-20
           lg:h-screen
           lg:block
-          lg:px-6
+          lg:pl-0
+          lg:pr-6
         "
       >
         <ul className="space-y-6">

@@ -37,6 +37,7 @@ function MyApp(props: AppProps) {
       <Header />
       <div
         className="
+          relative
           px-4
       
           w-full

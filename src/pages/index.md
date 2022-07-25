@@ -1,6 +1,6 @@
 ---
-title: Badge
-description: Badges are used to highlight an item's status for quick recognition.
+title: Getting Started
+description: Build acessible and beautiful interfaces.
 source: true #show source code button
 ---
 

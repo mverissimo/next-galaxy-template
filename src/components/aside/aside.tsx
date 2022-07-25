@@ -11,7 +11,7 @@ function Aside() {
       className="
         hidden
 
-        z-50
+        z-20
 
         fixed
         inset-0

@@ -14,6 +14,7 @@ import type { AppProps } from 'next/app';
 import { Header } from '@/components/header';
 import { Aside } from '@/components/aside';
 import { Article } from '@/components/article';
+import { TableOfContents } from '@/components/table-of-contents';
 
 function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
@@ -59,10 +60,11 @@ function MyApp(props: AppProps) {
           lg:px-12
         "
         >
-          <Article frontmatter={pageProps.markdoc.frontmatter}>
+          <Article frontmatter={pageProps.markdoc?.frontmatter}>
             <Component {...pageProps} />
           </Article>
         </main>
+        <TableOfContents contents={pageProps.markdoc.content} />
       </div>
     </React.Fragment>
   );

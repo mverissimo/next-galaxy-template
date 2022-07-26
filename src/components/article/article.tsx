@@ -2,14 +2,15 @@ import * as React from 'react';
 import type { HTMLAttributes } from 'react';
 
 interface ArticleProps extends HTMLAttributes<HTMLElement> {
-  frontmatter: {
-    title: string;
-    description: string;
-  };
+  frontmatter: Record<string, any> | undefined;
 }
 
 function Article(props: ArticleProps) {
   let { frontmatter, children } = props;
+
+  if (!frontmatter?.title || !frontmatter?.description) {
+    return null;
+  }
 
   return (
     <React.Fragment>

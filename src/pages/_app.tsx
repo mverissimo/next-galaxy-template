@@ -64,7 +64,7 @@ function MyApp(props: AppProps) {
             <Component {...pageProps} />
           </Article>
         </main>
-        <TableOfContents contents={pageProps.markdoc.content} />
+        <TableOfContents contents={pageProps.markdoc?.content} />
       </div>
     </React.Fragment>
   );

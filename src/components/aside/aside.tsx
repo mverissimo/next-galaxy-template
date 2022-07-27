@@ -23,8 +23,8 @@ function Aside() {
 
         lg:sticky
         lg:block
-        lg:w-[28rem]
-        xl:w-64
+        lg:w-64
+        2xl:w-64
         lg:h-auto
 
         lg:overflow-y-visible

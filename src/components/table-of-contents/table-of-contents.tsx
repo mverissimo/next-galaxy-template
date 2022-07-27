@@ -21,7 +21,7 @@ function TableOfContents(props: TableOfContentsProps) {
   );
 
   return (
-    <aside>
+    <aside className="flex">
       <div
         className="
           hidden

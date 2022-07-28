@@ -20,11 +20,7 @@ function Fence(props: FenceProps) {
 
   return (
     <div className="relative" aria-live="polite">
-      <Prism
-        key={language}
-        component="pre"
-        className={`language-${language} !py-4 !text-sm !leading-6 !font-mono !bg-slate-800`}
-      >
+      <Prism key={language} component="pre" className={`language-${language}`}>
         {code}
       </Prism>
       <button
@@ -40,7 +36,7 @@ function Fence(props: FenceProps) {
           p-1
           text-white
 
-          bg-slate-600
+          bg-slate-700
           rounded
 
           transition
@@ -51,14 +47,10 @@ function Fence(props: FenceProps) {
           cursor-pointer
           select-none
 
-          focus:ring-1
-          focus:ring-gray-600
           focus:outline-none
 
-          active:bg-slate-800
-
           hover:text-slate-200
-          hover:bg-slate-700
+          hover:bg-slate-800
         "
         onClick={setCopied}
         title="copy"

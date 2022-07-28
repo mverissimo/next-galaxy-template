@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import NAV from './aside.constants';
+import { SIDEBAR } from '@/config/sidebar';
 
 function Aside() {
   let router = useRouter();
@@ -52,7 +52,7 @@ function Aside() {
         "
       >
         <ul className="space-y-6">
-          {NAV.map((item) => (
+          {SIDEBAR.map((item) => (
             <li key={item.title}>
               <h5
                 className="

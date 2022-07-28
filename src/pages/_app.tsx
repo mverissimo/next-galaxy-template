@@ -12,6 +12,7 @@ import { Header } from '@/components/header';
 import { Aside } from '@/components/aside';
 import { Article } from '@/components/article';
 import { TableOfContents } from '@/components/table-of-contents';
+import { Pagination } from '@/components/pagination';
 
 function MyApp(props: AppProps) {
   const { Component, pageProps } = props;
@@ -60,6 +61,7 @@ function MyApp(props: AppProps) {
           <Article frontmatter={pageProps.markdoc?.frontmatter}>
             <Component {...pageProps} />
           </Article>
+          <Pagination />
         </main>
         <TableOfContents contents={pageProps.markdoc?.content} />
       </div>

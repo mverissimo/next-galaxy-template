@@ -1,21 +1,27 @@
-type NavCollection = {
+export type SidebarItem = {
   title: string;
-  slug: string;
-  children?: {
+  slug?: string;
+  children: Array<{
     title: string;
     slug: string;
     status?: string;
-  }[];
-}[];
+  }>;
+};
 
-const NAV: NavCollection = [
+export const SIDEBAR: Array<SidebarItem> = [
   {
     title: 'Getting Started',
-    slug: 'getting-started',
+    // slug: 'getting-started',
+    children: [
+      {
+        title: 'Installation',
+        slug: 'installation',
+      },
+    ],
   },
   {
     title: 'Design Tokens',
-    slug: 'design-tokens',
+    // slug: 'design-tokens',
     children: [
       {
         title: 'Color',
@@ -27,7 +33,7 @@ const NAV: NavCollection = [
       },
       {
         title: 'Shadow',
-        slug: '/',
+        slug: 'shadow',
       },
       {
         title: 'Spacing',
@@ -45,7 +51,7 @@ const NAV: NavCollection = [
   },
   {
     title: 'Layout',
-    slug: 'layout',
+    // slug: 'layout',
     children: [
       {
         title: 'Container',
@@ -78,7 +84,7 @@ const NAV: NavCollection = [
   },
   {
     title: 'Forms',
-    slug: 'forms',
+    // slug: 'forms',
     children: [
       {
         title: 'Button',
@@ -127,7 +133,7 @@ const NAV: NavCollection = [
   },
   {
     title: 'Data display',
-    slug: 'data-display',
+    // slug: 'data-display',
     children: [
       {
         title: 'Badge',
@@ -152,7 +158,7 @@ const NAV: NavCollection = [
   },
   {
     title: 'Feedback',
-    slug: 'feedback',
+    // slug: 'feedback',
     children: [
       {
         title: 'Alert',
@@ -175,7 +181,7 @@ const NAV: NavCollection = [
   },
   {
     title: 'Typography',
-    slug: 'typography',
+    // slug: 'typography',
     children: [
       {
         title: 'Heading',
@@ -189,7 +195,7 @@ const NAV: NavCollection = [
   },
   {
     title: 'Overlay',
-    slug: 'overlay',
+    // slug: 'overlay',
     children: [
       {
         title: 'Alert Dialog',
@@ -221,7 +227,7 @@ const NAV: NavCollection = [
   },
   {
     title: 'Disclosure',
-    slug: 'disclosure',
+    // slug: 'disclosure',
     children: [
       {
         title: 'Accordion',
@@ -241,7 +247,7 @@ const NAV: NavCollection = [
   },
   {
     title: 'Media',
-    slug: 'media',
+    // slug: 'media',
     children: [
       {
         title: 'Icon',
@@ -254,5 +260,3 @@ const NAV: NavCollection = [
     ],
   },
 ];
-
-export default NAV;

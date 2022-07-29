@@ -50,6 +50,7 @@ function Aside() {
           lg:pl-0
           lg:pr-6
         "
+        aria-label="Categories"
       >
         <ul className="space-y-6">
           {SIDEBAR.map((item) => (

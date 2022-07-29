@@ -12,7 +12,7 @@ export function usePagination() {
   let next: LinkItem | undefined;
 
   let links = SIDEBAR.reduce<LinkItem[]>(
-    (current, next) => current.concat(next.children),
+    (prev, next) => prev.concat(next.children),
     []
   );
 

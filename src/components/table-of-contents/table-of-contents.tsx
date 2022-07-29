@@ -1,27 +1,25 @@
 import React from 'react';
 import type { RenderableTreeNode } from '@markdoc/markdoc';
 
-import { collectHeadings } from './table-of-contents.utils';
+import { useHeadings } from './use-headings';
+import { useHeadingsObserver } from './use-headings-observer';
 
 interface TableOfContentsProps {
   contents: RenderableTreeNode;
 }
 
-type Headings = {
-  id: string;
-  level: number;
-  title: string;
-};
-
 function TableOfContents(props: TableOfContentsProps) {
   let { contents } = props;
 
-  let headings: Headings[] = collectHeadings(contents).filter(
-    (item: Headings) => item.id && (item.level === 2 || item.level === 3)
-  );
+  let { headings } = useHeadings(contents);
+  let { currentId } = useHeadingsObserver();
+
+  if (!Boolean(headings.length)) {
+    return null;
+  }
 
   return (
-    <aside className="flex">
+    <aside>
       <div
         className="
           hidden
@@ -60,10 +58,14 @@ function TableOfContents(props: TableOfContentsProps) {
                     className={`
                     block
                     text-sm
-                    text-slate-500
-                    hover:text-slate-600
 
                     ${level === 2 ? 'py-2 font-medium' : 'py-1 ml-4'}
+
+                    ${
+                      currentId === id
+                        ? 'text-blue-500 hover:text-blue-600'
+                        : 'text-slate-500 hover:text-slate-600'
+                    }
                   `}
                   >
                     {title}

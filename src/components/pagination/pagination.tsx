@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
+
 import { usePagination } from './use-pagination';
 
 function Pagination() {
@@ -33,11 +35,15 @@ function Pagination() {
               w-full
 
               text-right
+              text-gray-700
 
               border
               border-gray-100
               border-solid
               rounded-md
+
+              transition
+              duration-150
 
               focus:ring-2
               focus:ring-blue-100
@@ -48,43 +54,33 @@ function Pagination() {
               hover:bg-gray-50
             "
           >
-            <svg
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+            <ChevronLeftIcon
               className="
-            relative
-            -left-3
-          
-            w-8
-            h-8
-
-          text-gray-700
-          "
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
+                relative
+                -left-3
+              
+                w-8
+                h-8
+              "
+            />
             <div>
               <span
                 className="
-              block
-              text-xs
-              text-gray-500
-            "
+                  block
+
+                  text-xs
+                  text-gray-500
+                "
               >
                 previous
               </span>
               <span
                 className="
               block
+
               text-lg
               text-gray-700
-        
+
               font-semibold
             "
               >
@@ -110,11 +106,15 @@ function Pagination() {
               w-full
 
               text-left
+              text-gray-700
 
               border
               border-gray-100
               border-solid
               rounded-md
+
+              transition
+              duration-150
 
               focus:ring-2
               focus:ring-blue-100
@@ -129,6 +129,7 @@ function Pagination() {
               <span
                 className="
                   block
+
                   text-xs
                   text-gray-500
                 "
@@ -138,36 +139,25 @@ function Pagination() {
               <span
                 className="
                   block
+
                   text-lg
                   text-gray-700
-            
+
                   font-semibold
                 "
               >
                 {next.title}
               </span>
             </div>
-            <svg
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+            <ChevronRightIcon
               className="
                 relative
                 -right-3
-              
+
                 w-8
                 h-8
-
-              text-gray-700
               "
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+            />
           </a>
         </Link>
       )}

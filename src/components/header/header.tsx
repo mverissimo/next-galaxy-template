@@ -19,7 +19,9 @@ function Header() {
 
         border-b
         border-gray-200
-        bg-white
+
+        backdrop-blur
+        supports-backdrop-blur:bg-white/75;
       "
     >
       <div

@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { SelectTheme } from './select-theme';
+
 function Header() {
   return (
     <header
@@ -27,6 +29,9 @@ function Header() {
       <div
         className="
           flex
+          items-center
+          justify-between
+
           px-4
           sm:px-6
 
@@ -53,6 +58,8 @@ function Header() {
             🔮 next-docs
           </a>
         </Link>
+
+        <SelectTheme />
       </div>
     </header>
   );

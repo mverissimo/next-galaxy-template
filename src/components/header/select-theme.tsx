@@ -8,26 +8,36 @@ import {
   CheckIcon,
 } from '@heroicons/react/outline';
 
-const THEMES = [
-  {
+import { useTheme } from 'next-themes';
+import { useIsMounted } from './use-is-mounted';
+
+const THEMES = {
+  dark: {
     id: 'dark',
     name: 'Dark',
     icon: MoonIcon,
   },
-  {
+  light: {
     id: 'light',
     name: 'Light',
     icon: SunIcon,
   },
-  {
+  system: {
     id: 'system',
     name: 'System',
     icon: DesktopComputerIcon,
   },
-];
+};
 
 export function SelectTheme() {
-  const [theme, setTheme] = React.useState(THEMES[1]);
+  const isMounted = useIsMounted();
+  const { theme, setTheme } = useTheme();
+
+  const currentTheme = theme as keyof typeof THEMES;
+
+  if (!isMounted()) {
+    return null;
+  }
 
   return (
     <Listbox value={theme} onChange={setTheme}>
@@ -60,10 +70,10 @@ export function SelectTheme() {
             hover:bg-slate-50
           "
         >
-          {React.createElement(theme.icon, {
+          {React.createElement(THEMES[currentTheme].icon, {
             className: 'w-4 h-4 mr-1',
           })}
-          {theme.name}
+          {currentTheme}
         </Listbox.Button>
         <Transition
           as={React.Fragment}
@@ -93,10 +103,10 @@ export function SelectTheme() {
               focus:outline-none
             "
           >
-            {THEMES.map((theme) => (
+            {Object.values(THEMES).map(({ id, name }) => (
               <Listbox.Option
-                key={theme.id}
-                value={theme}
+                key={id}
+                value={id}
                 className={({ active }) => `
                   flex
                   items-center
@@ -109,6 +119,7 @@ export function SelectTheme() {
                   select-none
 
                   text-sm
+                  font-medium
 
                   transition-colors
                   duration-300
@@ -125,7 +136,7 @@ export function SelectTheme() {
               >
                 {({ selected }) => (
                   <React.Fragment>
-                    {theme.name}
+                    {name}
                     {selected ? (
                       <CheckIcon className="h-4 w-4" aria-hidden="true" />
                     ) : null}

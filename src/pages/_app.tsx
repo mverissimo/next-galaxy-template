@@ -8,6 +8,8 @@ import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
+import { ThemeProvider } from 'next-themes';
+
 import { Header } from '@/components/header';
 import { Aside } from '@/components/aside';
 import { Article } from '@/components/article';
@@ -33,38 +35,46 @@ function MyApp(props: AppProps) {
           content="build your own documentation page with nextjs and markdoc"
         />
       </Head>
-      <Header />
-      <div
-        className="
-          relative
-          px-4
-      
-          w-full
-          max-w-full
-          mx-auto
-      
-          lg:flex
-          xl:max-w-8xl
-        "
-      >
-        <Aside />
-        <main
-          className="
-          flex-auto
 
-          py-12
-          max-w-4xl
-    
-          lg:px-12
-        "
+      <ThemeProvider attribute="class" enableSystem>
+        <Header />
+
+        <div
+          className="
+            relative
+            px-4
+        
+            w-full
+            max-w-full
+            mx-auto
+
+            bg-red-100
+
+            dark:bg-green-100
+        
+            lg:flex
+            xl:max-w-8xl
+          "
         >
-          <Article frontmatter={pageProps.markdoc?.frontmatter}>
-            <Component {...pageProps} />
-          </Article>
-          <Pagination />
-        </main>
-        <TableOfContents contents={pageProps.markdoc?.content} />
-      </div>
+          <Aside />
+          <main
+            className="
+              flex-auto
+
+              py-12
+              max-w-4xl
+        
+              lg:px-12
+            "
+          >
+            <Article frontmatter={pageProps.markdoc?.frontmatter}>
+              <Component {...pageProps} />
+            </Article>
+            <Pagination />
+          </main>
+          <TableOfContents contents={pageProps.markdoc?.content} />
+        </div>
+      </ThemeProvider>
     </React.Fragment>
   );
 }

@@ -6,9 +6,5 @@ module.exports = withMarkdoc({
 })({
   reactStrictMode: true,
   swcMinify: true,
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
-  },
   pageExtensions: ['md', 'mdoc', 'ts', 'tsx'],
 });

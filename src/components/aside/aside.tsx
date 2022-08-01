@@ -49,6 +49,8 @@ function Aside() {
           lg:block
           lg:pl-0
           lg:pr-6
+
+          dark:bg-gray-900
         "
         aria-label="Categories"
       >
@@ -81,7 +83,7 @@ function Aside() {
                           // eslint don't detect ternary value?
                           // eslint-disable-next-line jsx-a11y/aria-proptypes
                           aria-current={`${
-                            router.pathname === slug ? 'page' : 'false'
+                            router.pathname === `/${slug}` ? 'page' : 'false'
                           }`}
                           className="
                             flex

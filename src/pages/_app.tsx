@@ -36,7 +36,7 @@ function MyApp(props: AppProps) {
         />
       </Head>
 
-      <ThemeProvider attribute="class" enableSystem>
+      <ThemeProvider attribute="class" disableTransitionOnChange enableSystem>
         <Header />
 
         <div
@@ -48,10 +48,6 @@ function MyApp(props: AppProps) {
             max-w-full
             mx-auto
 
-            bg-red-100
-
-            dark:bg-green-100
-        
             lg:flex
             xl:max-w-8xl
           "

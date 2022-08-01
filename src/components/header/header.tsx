@@ -23,7 +23,10 @@ function Header() {
         border-gray-200
 
         backdrop-blur
-        supports-backdrop-blur:bg-white/75;
+        supports-backdrop-blur:bg-white/90
+
+        dark:border-gray-800
+        dark:supports-backdrop-blur:bg-gray-900/90
       "
     >
       <div
@@ -53,6 +56,8 @@ function Header() {
         
               font-bold
               text-gray-600
+
+              dark:text-white
             "
           >
             🔮 next-docs

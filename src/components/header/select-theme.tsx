@@ -53,21 +53,28 @@ export function SelectTheme() {
             text-sm
             text-slate-600
             font-medium
+            capitalize
 
             border
-            border-gray-200
+            border-gray-300
             rounded-lg
+            
             bg-white
 
             transition
             duration-150
 
-            focus:ring-1
-            focus:outline-none
-            focus:ring-blue-500
-            focus:border-blue-500
+            focus-visible:ring-1
+            focus-visible:ring-blue-500
+            focus-visible:border-blue-500
+            focus-visible:outline-none
 
             hover:bg-slate-50
+
+            dark:text-white
+            dark:bg-gray-900
+            dark:border-gray-800
+            dark:focus-visible:border-blue-500
           "
         >
           {React.createElement(THEMES[currentTheme].icon, {
@@ -101,6 +108,9 @@ export function SelectTheme() {
               shadow-xs
 
               focus:outline-none
+
+              dark:bg-gray-800
+              dark:border-gray-700/50
             "
           >
             {Object.values(THEMES).map(({ id, name }) => (
@@ -124,13 +134,14 @@ export function SelectTheme() {
                   transition-colors
                   duration-300
 
-                  hover:text-blue-600
+                  hover:text-blue-500
                   hover:bg-blue-50
 
+                  dark:bg-gray-800
                   ${
                     active
-                      ? 'text-blue-600 bg-slate-50'
-                      : 'text-slate-500 bg-white'
+                      ? 'text-blue-500 bg-slate-50 dark:bg-blue-500/10'
+                      : 'text-slate-500 bg-white dark:text-white'
                   }
                 `}
               >

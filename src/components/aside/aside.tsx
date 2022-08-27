@@ -69,6 +69,8 @@ function Aside() {
 
                   text-sm
                   text-slate-900
+
+                  dark:text-white
                 "
               >
                 {item.title}
@@ -96,10 +98,14 @@ function Aside() {
                             text-sm
                             text-slate-500
 
+                            dark:text-slate-400
+
                             rounded
 
                             hover:bg-gray-50
                             hover:text-gray-600
+
+                            dark:hover:bg-blue-400/10
 
                             aria-current-page:bg-blue-50
                             aria-current-page:border-l-2

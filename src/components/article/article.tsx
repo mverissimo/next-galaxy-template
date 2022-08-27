@@ -24,8 +24,9 @@ function Article(props: ArticleProps) {
             text-3xl
             text-slate-900
             tracking-tight
-
             font-semibold
+
+            dark:text-white
           "
         >
           {frontmatter.title}
@@ -36,7 +37,9 @@ function Article(props: ArticleProps) {
           mt-0
     
           text-base
-          text-gray-500
+          text-slate-500
+
+          dark:text-slate-400
         "
         >
           {frontmatter.description}

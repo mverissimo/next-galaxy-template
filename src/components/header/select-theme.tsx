@@ -4,9 +4,9 @@ import { Listbox, Transition } from '@headlessui/react';
 import {
   MoonIcon,
   SunIcon,
-  DesktopComputerIcon,
+  ComputerDesktopIcon,
   CheckIcon,
-} from '@heroicons/react/outline';
+} from '@heroicons/react/20/solid';
 
 import { useTheme } from 'next-themes';
 import { useIsMounted } from './use-is-mounted';
@@ -25,7 +25,7 @@ const THEMES = {
   system: {
     id: 'system',
     name: 'System',
-    icon: DesktopComputerIcon,
+    icon: ComputerDesktopIcon,
   },
 };
 

@@ -6,7 +6,10 @@ import * as React from 'react';
 import Prism from 'react-prism';
 import useClipboard from 'react-use-clipboard';
 
-import { ClipboardIcon, ClipboardCheckIcon } from '@heroicons/react/outline';
+import {
+  ClipboardIcon,
+  ClipboardDocumentCheckIcon,
+} from '@heroicons/react/24/outline';
 
 interface FenceProps {
   language: string;
@@ -58,7 +61,7 @@ function Fence(props: FenceProps) {
         title="copy"
       >
         {isCopied ? (
-          <ClipboardCheckIcon className="h-4 w-4" />
+          <ClipboardDocumentCheckIcon className="h-4 w-4" />
         ) : (
           <ClipboardIcon className="h-4 w-4" />
         )}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { HTMLAttributes } from 'react';
 
-import { HashtagIcon } from '@heroicons/react/outline';
+import { HashtagIcon } from '@heroicons/react/20/solid';
 
 interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   level: 1 | 2 | 3 | 4 | 5 | 6;

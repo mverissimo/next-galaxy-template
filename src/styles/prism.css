@@ -10,12 +10,12 @@ pre[class*='language-'] {
   hyphens: none;
 
   @apply text-left
-  text-sm
+    text-sm
 
-  font-mono
-  leading-6
-  
-  bg-slate-800;
+    font-mono
+    leading-6
+    
+    bg-slate-800;
 
   ::selection,
   &::selection {

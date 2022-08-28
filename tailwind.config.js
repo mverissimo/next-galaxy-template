@@ -9,7 +9,7 @@ module.exports = {
         '8xl': '90rem',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
     },
   },

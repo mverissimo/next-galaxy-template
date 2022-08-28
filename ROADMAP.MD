@@ -37,7 +37,7 @@
 
 [ ] Search
 [ ] Code live preview
-[ ] Fonts variables
+[x] Fonts variables
 
 ## Others
 

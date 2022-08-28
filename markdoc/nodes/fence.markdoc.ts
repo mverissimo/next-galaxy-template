@@ -6,10 +6,14 @@ export const fence = {
     content: {
       type: String,
     },
+    high: {
+      type: String,
+    },
+    highlight: {
+      type: String,
+    },
     language: {
       type: String,
-      description:
-        'The programming language of the code block. Place it after the backticks.',
     },
   },
 };

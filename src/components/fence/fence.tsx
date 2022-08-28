@@ -1,10 +1,11 @@
-import 'prismjs';
-
 import * as React from 'react';
 
-//@ts-ignore
-import Prism from 'react-prism';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import type { Language } from 'prism-react-renderer';
+
 import useClipboard from 'react-use-clipboard';
+
+import { calculateLinesToHighlight } from './fence.utils';
 
 import {
   ClipboardIcon,
@@ -12,22 +13,60 @@ import {
 } from '@heroicons/react/24/outline';
 
 interface FenceProps {
-  language: string;
+  /**
+   * Prism language
+   */
+  language: Language;
+
+  /**
+   * Lines to highlight
+   */
+  highlight: string;
+
+  /**
+   *
+   */
   children: string;
 }
 
 function Fence(props: FenceProps) {
-  let { language, children: code } = props;
+  let { language, highlight, children: code } = props;
 
   let [isCopied, setCopied] = useClipboard(code, {
     successDuration: 1000,
   });
 
+  let shouldHighlightLine = calculateLinesToHighlight(highlight);
+
   return (
     <div className="relative" aria-live="polite">
-      <Prism key={language} component="pre" className={`language-${language}`}>
-        {code}
-      </Prism>
+      <Highlight
+        {...defaultProps}
+        code={code.trim()}
+        language={language}
+        theme={undefined}
+      >
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre className={className} style={style}>
+            {tokens.map((line, index) => {
+              const lineProps = getLineProps({ line, key: index });
+
+              if (shouldHighlightLine(index)) {
+                lineProps.className = `${lineProps.className} -mx-4 pl-3 pr-4 border-l-4 border-purple-400 bg-purple-300/[0.10]`;
+              }
+
+              return (
+                <div key={index} {...lineProps}>
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token, key })} />
+                  ))}
+                </div>
+              );
+            })}
+          </pre>
+        )}
+      </Highlight>
+
       <button
         className="
           absolute

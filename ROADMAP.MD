@@ -33,6 +33,12 @@
 [ ] Code preview
 [ ] Accordion aside
 
+## Features
+
+[ ] Search
+[ ] Code live preview
+[ ] Fonts variables
+
 ## Others
 
 [ ] Darkmode

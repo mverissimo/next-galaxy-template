@@ -8,13 +8,13 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
 import { Header } from '@/components/header';
-import { Aside } from '@/components/aside';
-import { Article } from '@/components/article';
-import { TableOfContents } from '@/components/table-of-contents';
-import { Pagination } from '@/components/pagination';
+
+import { LayoutDocs } from '@/layouts/docs';
 
 function MyApp(props: AppProps) {
-  const { Component, pageProps } = props;
+  const { Component, pageProps, router } = props;
+
+  const isDocs = router.asPath.startsWith('/docs');
 
   return (
     <React.Fragment>
@@ -36,37 +36,13 @@ function MyApp(props: AppProps) {
       <ThemeProvider attribute="class" disableTransitionOnChange enableSystem>
         <Header />
 
-        <div
-          className="
-            relative
-            px-4
-        
-            w-full
-            max-w-full
-            mx-auto
-
-            lg:flex
-            xl:max-w-8xl
-          "
-        >
-          <Aside />
-          <main
-            className="
-              flex-auto
-
-              py-12
-              max-w-4xl
-        
-              lg:px-12
-            "
-          >
-            <Article frontmatter={pageProps.markdoc?.frontmatter}>
-              <Component {...pageProps} />
-            </Article>
-            <Pagination />
-          </main>
-          <TableOfContents contents={pageProps.markdoc?.content} />
-        </div>
+        {isDocs ? (
+          <LayoutDocs markdoc={pageProps.markdoc}>
+            <Component {...pageProps} />
+          </LayoutDocs>
+        ) : (
+          <Component {...pageProps} />
+        )}
       </ThemeProvider>
     </React.Fragment>
   );

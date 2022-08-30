@@ -18,4 +18,13 @@ export const SIDEBAR: Array<SidebarItem> = [
       },
     ],
   },
+  {
+    title: 'Components',
+    children: [
+      {
+        title: 'Callout',
+        slug: '/docs/components/callout',
+      },
+    ],
+  },
 ];

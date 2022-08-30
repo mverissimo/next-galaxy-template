@@ -19,5 +19,7 @@ article {
     max-w-none
     
     prose
-    prose-slate;
+    prose-slate
+    
+    dark:prose-invert;
 }

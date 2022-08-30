@@ -72,7 +72,9 @@ function Callout(props: CalloutProps) {
         rounded-md
         text-sm
 
+        not-prose
 
+        ${`[&>div>p>a]:underline` /*ugly but works*/}
         ${element.className}
       `}
       {...rest}
@@ -100,7 +102,7 @@ function Callout(props: CalloutProps) {
         {React.Children.toArray(children).map((child, index) =>
           React.cloneElement(child as ReactElement, {
             key: index,
-            className: 'mt-1 mb-0 text-slate-700',
+            className: 'mt-1 text-slate-700',
           })
         )}
       </div>

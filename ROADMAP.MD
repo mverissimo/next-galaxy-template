@@ -28,7 +28,7 @@
 [x] Pagination
 [x] Table of contents
 [ ] Tabs
-[ ] Callout
+[x] Callout
 [ ] Button
 [ ] Code preview
 [ ] Accordion aside

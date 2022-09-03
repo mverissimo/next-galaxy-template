@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Highlight, { defaultProps } from 'prism-react-renderer';
+import Highlight, { Prism, defaultProps } from 'prism-react-renderer';
 import type { Language } from 'prism-react-renderer';
 
 import useClipboard from 'react-use-clipboard';
@@ -29,6 +29,41 @@ interface FenceProps {
   children: string;
 }
 
+/** NOTE:
+ * https://github.com/markdoc/docs/blob/main/components/Code.js#L9
+ */
+//@ts-ignore
+Prism.languages.markdoc = {
+  tag: {
+    pattern: /{%(.|\n)*?%}/i,
+    inside: {
+      tagType: {
+        pattern: /^({%\s*\/?)(\w*|-)*\b/i,
+        lookbehind: true,
+      },
+      id: /#(\w|-)*\b/,
+      string: /".*?"/,
+      equals: /=/,
+      number: /\b\d+\b/i,
+      variable: {
+        pattern: /\$[\w.]+/i,
+        inside: {
+          punctuation: /\./i,
+        },
+      },
+      function: /\b\w+(?=\()/,
+      punctuation: /({%|\/?%})/i,
+      boolean: /false|true/,
+    },
+  },
+  variable: {
+    pattern: /\$\w+/i,
+  },
+  function: {
+    pattern: /\b\w+(?=\()/i,
+  },
+};
+
 function Fence(props: FenceProps) {
   let { language, highlight, children: code } = props;
 
@@ -42,8 +77,9 @@ function Fence(props: FenceProps) {
     <div className="relative" aria-live="polite">
       <Highlight
         {...defaultProps}
-        code={code.trim()}
+        Prism={Prism}
         language={language}
+        code={code.trim()}
         theme={undefined}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -97,7 +133,7 @@ function Fence(props: FenceProps) {
           hover:bg-slate-800
         "
         onClick={setCopied}
-        title="copy"
+        title={isCopied ? 'copied' : 'copy'}
       >
         {isCopied ? (
           <ClipboardDocumentCheckIcon className="h-4 w-4" />

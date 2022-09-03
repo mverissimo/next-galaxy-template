@@ -1,2 +1,2 @@
-export * from './fence.markdoc';
-export * from './heading.markdoc';
+export * from './fence';
+export * from './heading';

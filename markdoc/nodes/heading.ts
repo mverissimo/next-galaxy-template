@@ -33,9 +33,6 @@ export const heading: MarkdocNextJsSchema = {
       required: true,
       default: 1,
     },
-    className: {
-      type: String,
-    },
   },
   transform(node, config) {
     const attributes = node.transformAttributes(config);

@@ -13,7 +13,7 @@ export interface CalloutProps {
   /**
    * Semantic appearance
    */
-  appearance?: 'caution' | 'danger' | 'info' | 'tip' | 'note';
+  appearance?: 'caution' | 'danger' | 'info' | 'note' | 'tip';
 
   /**
    * Optional title

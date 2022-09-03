@@ -3,6 +3,18 @@ title: Callout
 description: Provide contextual feedback messages.
 ---
 
+## Usage
+
+{% markdoc %}
+
+```markdoc
+{% callout appearance="danger" %}
+content
+{% /callout %}
+```
+
+{% /markdoc %}
+
 ## Examples
 
 {% callout appearance="caution" %}

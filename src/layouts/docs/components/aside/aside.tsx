@@ -85,7 +85,7 @@ function Aside() {
                           // eslint don't detect ternary value?
                           // eslint-disable-next-line jsx-a11y/aria-proptypes
                           aria-current={`${
-                            router.pathname === `/${slug}` ? 'page' : 'false'
+                            router.pathname === slug ? 'page' : 'false'
                           }`}
                           className="
                             flex

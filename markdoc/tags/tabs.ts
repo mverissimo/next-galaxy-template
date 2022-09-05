@@ -1,18 +1,18 @@
 import type { MarkdocNextJsSchema } from '@markdoc/next.js';
 
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/tabs';
+import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@/components/tabs';
 
-export const tabs: MarkdocNextJsSchema = {
-  render: Tabs,
+export const group: MarkdocNextJsSchema = {
+  render: TabGroup,
   attributes: {
-    defaultValue: {
-      type: String,
+    defaultIndex: {
+      type: Number,
     },
   },
 };
 
 export const list: MarkdocNextJsSchema = {
-  render: TabsList,
+  render: TabList,
   attributes: {
     'aria-label': {
       type: String,
@@ -20,11 +20,14 @@ export const list: MarkdocNextJsSchema = {
   },
 };
 
-export const trigger: MarkdocNextJsSchema = {
-  render: TabsTrigger,
+export const tab: MarkdocNextJsSchema = {
+  render: Tab,
   selfClosing: true,
   attributes: {
-    value: {
+    disabled: {
+      type: Boolean,
+    },
+    label: {
       type: String,
     },
     children: {
@@ -33,20 +36,24 @@ export const trigger: MarkdocNextJsSchema = {
   },
 };
 
-export const content: MarkdocNextJsSchema = {
-  render: TabsContent,
+export const panels: MarkdocNextJsSchema = {
+  render: TabPanels,
+};
+
+export const panel: MarkdocNextJsSchema = {
+  render: TabPanel,
   attributes: {
-    value: {
+    language: {
       type: String,
     },
   },
 };
 
-export const config = {
-  tags: {
-    tabs,
-    list,
-    trigger,
-    content,
-  },
-};
+// // eslint-disable-next-line import/no-anonymous-default-export
+// export default {
+//   'tab-group': group,
+//   tab,
+//   'tab-list': list,
+//   'tab-panels': panels,
+//   'tab-panel': panel,
+// };

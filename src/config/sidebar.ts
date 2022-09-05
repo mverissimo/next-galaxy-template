@@ -14,7 +14,7 @@ export const SIDEBAR: Array<SidebarItem> = [
     children: [
       {
         title: 'Installation',
-        slug: 'installation',
+        slug: '/docs',
       },
     ],
   },
@@ -24,6 +24,10 @@ export const SIDEBAR: Array<SidebarItem> = [
       {
         title: 'Callout',
         slug: '/docs/components/callout',
+      },
+      {
+        title: 'Tabs',
+        slug: '/docs/components/tabs',
       },
     ],
   },

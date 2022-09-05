@@ -11,18 +11,19 @@ pre[class*='language-'] {
 
   @apply text-left
     text-sm
+    !text-white
 
     font-mono
     leading-6
     
-    bg-slate-800;
+    !bg-gray-800;
 
   ::selection,
   &::selection {
     @apply bg-stone-800;
   }
 }
-
+/* 
 .token {
   &.atrule {
     @apply text-purple-400;
@@ -171,4 +172,4 @@ pre[class*='language-'] {
   &.variable {
     @apply text-rose-400;
   }
-}
+} */

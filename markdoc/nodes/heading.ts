@@ -21,7 +21,7 @@ function generateID(
     .toLowerCase();
 }
 
-export const heading: MarkdocNextJsSchema = {
+const heading: MarkdocNextJsSchema = {
   render: Heading,
   children: ['inline'],
   attributes: {
@@ -49,3 +49,5 @@ export const heading: MarkdocNextJsSchema = {
     );
   },
 };
+
+export default heading;

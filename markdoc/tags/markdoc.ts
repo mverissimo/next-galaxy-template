@@ -3,7 +3,7 @@ import type { MarkdocNextJsSchema } from '@markdoc/next.js';
 
 import { Fence } from '@/components/fence';
 
-export const markdoc: MarkdocNextJsSchema = {
+const markdoc: MarkdocNextJsSchema = {
   render: Fence,
   attributes: {},
   transform(node, config) {
@@ -20,3 +20,5 @@ export const markdoc: MarkdocNextJsSchema = {
     );
   },
 };
+
+export default markdoc;

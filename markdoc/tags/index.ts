@@ -1,3 +1,3 @@
 export * from './tabs';
-export * from './callout';
-export * from './markdoc';
+export { default as callout } from './callout';
+export { default as markdoc } from './markdoc';

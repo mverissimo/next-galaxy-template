@@ -37,6 +37,20 @@ I have a message for you
 I have a _message_ for you
 {% /callout %}
 
+## Specifying title
+
+You may also specify an optional title.
+
+{% markdoc %}
+
+```markdoc
+{% callout title="Custom title" %}
+content
+{% /callout %}
+```
+
+{% /markdoc %}
+
 {% callout title="Custom title" %}
 I have a message for you
 {% /callout %}

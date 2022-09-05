@@ -80,7 +80,6 @@ function Fence(props: FenceProps) {
         Prism={Prism}
         language={language}
         code={code.trim()}
-        theme={undefined}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style}>
@@ -88,6 +87,8 @@ function Fence(props: FenceProps) {
               const lineProps = getLineProps({ line, key: index });
 
               if (shouldHighlightLine(index)) {
+                console.log('opa');
+
                 lineProps.className = `${lineProps.className} -mx-4 pl-3 pr-4 border-l-4 border-purple-400 bg-purple-300/[0.10]`;
               }
 

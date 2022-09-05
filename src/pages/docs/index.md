@@ -8,7 +8,7 @@ source: true #show source code button
 
 To use Galaxy UI in your _project_, run one of **the following** commands in your terminal:
 
-```bash
+```bash {% highlight="{0,1,2}" %}
 yarn add @galaxy-ui/react
 ```
 

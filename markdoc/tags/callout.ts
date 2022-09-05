@@ -1,7 +1,7 @@
 import { Callout } from '@/components/callout';
 import type { MarkdocNextJsSchema } from '@markdoc/next.js';
 
-export const callout: MarkdocNextJsSchema = {
+const callout: MarkdocNextJsSchema = {
   render: Callout,
   selfClosing: true,
   children: ['paragraph', 'tag', 'list'],
@@ -20,3 +20,5 @@ export const callout: MarkdocNextJsSchema = {
     },
   },
 };
+
+export default callout;

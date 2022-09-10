@@ -13,9 +13,7 @@ import { Header } from '@/components/header';
 import { LayoutDocs } from '@/layouts/docs';
 
 interface MyAppProps extends AppProps {
-  pageProps: {
-    markdoc: MarkdocNextJsPageProps;
-  };
+  pageProps: MarkdocNextJsPageProps;
 }
 
 function MyApp(props: MyAppProps) {
@@ -26,7 +24,7 @@ function MyApp(props: MyAppProps) {
   return (
     <React.Fragment>
       <Head>
-        <title>Next-docs</title>
+        <title>{pageProps.markdoc?.frontmatter.title} - Next template</title>
 
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -36,7 +34,7 @@ function MyApp(props: MyAppProps) {
         />
         <meta
           name="description"
-          content="build your own documentation page with nextjs and markdoc"
+          content={pageProps.markdoc?.frontmatter.description}
         />
       </Head>
 

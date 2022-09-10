@@ -22,7 +22,7 @@ function Tab(props: TabProps) {
           'rounded-md select-none',
           'focus:outline-none',
           selected
-            ? 'text-slate-900 bg-gray-200'
+            ? 'text-slate-900 backdrop-blur supports-backdrop-blur:bg-gray-200/50'
             : 'text-slate-400 hover:text-slate-900',
           disabled && 'text-slate-300 pointer-events-none'
         )

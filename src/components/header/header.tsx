@@ -23,7 +23,7 @@ function Header() {
         border-gray-200
 
         backdrop-blur
-        supports-backdrop-blur:bg-white/90
+        supports-backdrop-blur:bg-white/60
 
         dark:border-gray-800
         dark:supports-backdrop-blur:bg-gray-900/70
@@ -46,10 +46,9 @@ function Header() {
           lg:max-w-8xl
         "
       >
-        <Link href="/" passHref>
-          <a
-            href="/"
-            className="
+        <Link
+          href="/"
+          className="
               flex
               flex-row
               items-center
@@ -59,9 +58,9 @@ function Header() {
 
               dark:text-white
             "
-          >
-            🔮 next-docs
-          </a>
+          passHref
+        >
+          🔮 next-docs
         </Link>
 
         <SelectTheme />

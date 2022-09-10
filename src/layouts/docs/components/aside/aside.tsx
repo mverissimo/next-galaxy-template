@@ -41,8 +41,6 @@ function Aside() {
           pl-4
           py-12
 
-          bg-white
-
           lg:sticky
           lg:top-20
           lg:h-screen

@@ -5,13 +5,20 @@ import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
+import type { MarkdocNextJsPageProps } from '@markdoc/next.js';
+
 import { ThemeProvider } from 'next-themes';
 
 import { Header } from '@/components/header';
-
 import { LayoutDocs } from '@/layouts/docs';
 
-function MyApp(props: AppProps) {
+interface MyAppProps extends AppProps {
+  pageProps: {
+    markdoc: MarkdocNextJsPageProps;
+  };
+}
+
+function MyApp(props: MyAppProps) {
   const { Component, pageProps, router } = props;
 
   const isDocs = router.asPath.startsWith('/docs');

@@ -14,7 +14,6 @@ function Pagination() {
         flex-col
         gap-4
 
-        mt-24
         w-full
 
         md:flex-row

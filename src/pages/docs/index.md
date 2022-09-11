@@ -28,4 +28,4 @@ Sometimes creating a documentation website is an exhausting task or spent much t
 - [Nextjs](https://nextjs.org/)
 - [Markdoc](https://markdoc.io/)
 - [Headless UI](https://headlessui.com/)
-- [Tailwind](https://tailwindcss.com/)
+- [Tailwindcss](https://tailwindcss.com/)

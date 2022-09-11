@@ -7,10 +7,7 @@ import useClipboard from 'react-use-clipboard';
 
 import { calculateLinesToHighlight } from './fence.utils';
 
-import {
-  ClipboardIcon,
-  ClipboardDocumentCheckIcon,
-} from '@heroicons/react/24/outline';
+import { ClipboardIcon, CheckIcon } from '@heroicons/react/24/outline';
 
 interface FenceProps {
   /**
@@ -89,7 +86,7 @@ function Fence(props: FenceProps) {
               if (shouldHighlightLine(index)) {
                 console.log('opa');
 
-                lineProps.className = `${lineProps.className} -mx-4 pl-3 pr-4 border-l-4 border-purple-400 bg-purple-300/[0.10]`;
+                lineProps.className = `${lineProps.className} -mx-4 pl-3 pr-4 border-l-4 border-gray-400 bg-gray-300/[0.10]`;
               }
 
               return (
@@ -117,7 +114,7 @@ function Fence(props: FenceProps) {
           p-1
           text-white
 
-          bg-slate-700
+          bg-slate-600
           rounded
 
           transition
@@ -131,13 +128,13 @@ function Fence(props: FenceProps) {
           focus:outline-none
 
           hover:text-slate-200
-          hover:bg-slate-800
+          hover:bg-slate-700
         "
         onClick={setCopied}
         title={isCopied ? 'copied' : 'copy'}
       >
         {isCopied ? (
-          <ClipboardDocumentCheckIcon className="h-4 w-4" />
+          <CheckIcon className="h-4 w-4" />
         ) : (
           <ClipboardIcon className="h-4 w-4" />
         )}

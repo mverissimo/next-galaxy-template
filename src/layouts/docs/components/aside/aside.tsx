@@ -8,38 +8,40 @@ function Aside() {
 
   return (
     <aside
+      id="aside"
       className="
         hidden
 
         z-10
 
         fixed
-        inset-0
+        top-[64px]
+        left-0
+        lg:inset-0
 
         w-full
         h-full
 
         self-end
+        bg-white
 
         lg:sticky
         lg:block
         lg:w-64
         2xl:w-64
         lg:h-auto
-
-        lg:overflow-y-visible
+        lg:bg-transparent
       "
     >
       <nav
         className="
-          h-full
+          h-[calc(100%-64px)]
           max-w-2xl
 
-          overflow-y-auto
+          px-4
+          py-8
 
-          pr-4
-          pl-4
-          py-12
+          overflow-auto
 
           lg:sticky
           lg:top-20
@@ -47,6 +49,7 @@ function Aside() {
           lg:block
           lg:pl-0
           lg:pr-6
+          lg:py-12
 
           dark:bg-gray-900
         "
@@ -95,11 +98,14 @@ function Aside() {
 
                             text-sm
                             text-slate-500
-
                             dark:text-slate-400
 
                             rounded
 
+                            outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            
                             hover:text-blue-600
                             dark:hover:bg-blue-400/10
 

@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const Burger = dynamic(() => import('./burger'));
 
 // import { SelectTheme } from './select-theme';
 
@@ -36,7 +39,6 @@ function Header() {
           justify-between
 
           px-4
-          sm:px-6
 
           w-full
           h-full
@@ -46,9 +48,11 @@ function Header() {
           lg:max-w-8xl
         "
       >
-        <Link
-          href="/"
-          className="
+        <div className="flex items-center">
+          <Burger />
+          <Link
+            href="/"
+            className="
               flex
               flex-row
               items-center
@@ -58,11 +62,11 @@ function Header() {
 
               dark:text-white
             "
-          passHref
-        >
-          🔮 Galaxy
-        </Link>
-
+            passHref
+          >
+            🔮 Galaxy
+          </Link>
+        </div>
         {/* <SelectTheme /> */}
       </div>
     </header>

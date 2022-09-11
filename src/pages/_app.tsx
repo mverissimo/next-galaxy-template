@@ -9,6 +9,7 @@ import type { MarkdocNextJsPageProps } from '@markdoc/next.js';
 
 import { ThemeProvider } from 'next-themes';
 
+import { SkipToContent } from '@/components/skip-to-content';
 import { Header } from '@/components/header';
 import { LayoutDocs } from '@/layouts/docs';
 
@@ -24,7 +25,7 @@ function MyApp(props: MyAppProps) {
   return (
     <React.Fragment>
       <Head>
-        <title>{pageProps.markdoc?.frontmatter.title} - Next template</title>
+        <title>{`${pageProps.markdoc?.frontmatter.title} - Next template`}</title>
 
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -39,6 +40,7 @@ function MyApp(props: MyAppProps) {
       </Head>
 
       <ThemeProvider attribute="class" disableTransitionOnChange enableSystem>
+        <SkipToContent />
         <Header />
 
         {isDocs ? (

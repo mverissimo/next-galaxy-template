@@ -24,7 +24,7 @@ export function usePagination() {
   };
 
   let getIndex = links.findIndex((item) => {
-    return router.pathname.replace('/', '') === item?.slug;
+    return router.pathname === item?.slug;
   });
 
   if (getIndex > 0) {

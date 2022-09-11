@@ -3,10 +3,18 @@ title: Code Highlighting
 description: Build acessible and beautiful interfaces.
 ---
 
-## Installation
+## Usage
 
-To use Galaxy UI in your _project_, run one of the following commands in your terminal:
+This template use `Prism` and `prism-react-renderer` to highlight the code blocks. This section covers how you can customize it.
 
-```js
-import { ThemeProvider } from '@galaxy-ui/react';
+### Line highlight
+
+To markup single lines, use the [attribute](https://markdoc.dev/docs/attributes) `{% highlight="{1,2,3,4,5}" %}` or `{% highlight="{1-5}" %}` to highlight a range.
+
+```tsx {% highlight="{2}" %}
+function Button(props) {
+  let { children } = props;
+
+  return <button>{children}</button>;
+}
 ```

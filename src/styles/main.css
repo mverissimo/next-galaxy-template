@@ -1,5 +1,3 @@
-@import './prism.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,4 +20,30 @@ article {
     prose-slate
     
     dark:prose-invert;
+}
+
+pre[class*='language-'] {
+  @apply relative
+    overflow-auto
+    p-4;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  tab-size: 4;
+  hyphens: none;
+
+  @apply text-left
+    text-sm
+    !text-white
+
+    font-mono
+    leading-6
+    
+    !bg-gray-800;
+
+  ::selection,
+  &::selection {
+    @apply bg-stone-800;
+  }
 }

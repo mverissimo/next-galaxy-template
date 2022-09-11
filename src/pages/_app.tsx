@@ -25,7 +25,7 @@ function MyApp(props: MyAppProps) {
   return (
     <React.Fragment>
       <Head>
-        <title>{`${pageProps.markdoc?.frontmatter.title} - Next template`}</title>
+        <title>{`${pageProps.markdoc?.frontmatter.title} - Galaxy template`}</title>
 
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

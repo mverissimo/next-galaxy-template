@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { SelectTheme } from './select-theme';
+// import { SelectTheme } from './select-theme';
 
 function Header() {
   return (
@@ -60,10 +60,10 @@ function Header() {
             "
           passHref
         >
-          🔮 next-docs
+          🔮 Galaxy
         </Link>
 
-        <SelectTheme />
+        {/* <SelectTheme /> */}
       </div>
     </header>
   );

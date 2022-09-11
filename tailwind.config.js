@@ -31,6 +31,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('tailwindcss-aria-attributes'),
+    require('@tailwindcss/line-clamp'),
     function ({ addVariant }) {
       addVariant(
         'supports-backdrop-blur',

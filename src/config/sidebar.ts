@@ -35,6 +35,10 @@ export const SIDEBAR: Array<SidebarItem> = [
     title: 'Advanced',
     children: [
       {
+        title: 'Configuration',
+        slug: '/docs/advanced/configuration',
+      },
+      {
         title: 'Code Highlighting',
         slug: '/docs/advanced/code-highlighting',
       },

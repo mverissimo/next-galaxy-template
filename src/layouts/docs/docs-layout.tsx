@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import type { ReactNode } from 'react';
 
 import { PencilSquareIcon } from '@heroicons/react/20/solid';
@@ -7,13 +8,16 @@ import { Aside } from './components/aside';
 import { Pagination } from './components/pagination';
 import { TableOfContents } from './components/table-of-contents';
 
+import { GITHUB_EDIT_URL } from '@/config';
+
 interface DocsLayoutProps {
   markdoc: Record<string, any> | undefined;
   children: ReactNode;
 }
 
 function DocsLayout(props: DocsLayoutProps) {
-  const { markdoc, children } = props;
+  let { markdoc, children } = props;
+  let router = useRouter();
 
   return (
     <div
@@ -78,10 +82,8 @@ function DocsLayout(props: DocsLayoutProps) {
         {children}
 
         <div className="mt-24">
-          <Link
-            href={`https://github.com/tailwindlabs/tailwindcss.com/edit/master/src/pages.md`}
-          >
-            <span className="flex items-center mb-4 cursor-pointer text-sm text-slate-600 hover:underline hover:text-slate-900">
+          <Link href={`${GITHUB_EDIT_URL}/${router.pathname}.md`}>
+            <span className="flex items-center mb-6 cursor-pointer text-sm text-slate-600 hover:underline hover:text-slate-900">
               <PencilSquareIcon className="w-4 h-4 mr-2" />
               Edit this page on GitHub
             </span>

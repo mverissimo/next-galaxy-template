@@ -11,12 +11,9 @@ function Pagination() {
     <div
       className="
         flex
-        flex-col
         gap-4
 
         w-full
-
-        md:flex-row
       "
     >
       {prev?.slug && (
@@ -75,13 +72,16 @@ function Pagination() {
               </span>
               <span
                 className="
-              block
+                  block
 
-              text-lg
-              text-gray-700
+                  text-base
+                  text-gray-700
 
-              font-semibold
-            "
+                  md:text-lg
+
+                  font-semibold
+                  line-clamp-1
+                "
               >
                 {prev.title}
               </span>
@@ -139,10 +139,13 @@ function Pagination() {
                 className="
                   block
 
-                  text-lg
+                  text-base
                   text-gray-700
 
+                  lg:text-lg
+
                   font-semibold
+                  line-clamp-1
                 "
               >
                 {next.title}

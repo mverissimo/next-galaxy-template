@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { SIDEBAR } from '@/config/sidebar';
+import { SIDEBAR } from '@/config';
 
 function Aside() {
   let router = useRouter();

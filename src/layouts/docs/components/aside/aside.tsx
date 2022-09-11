@@ -55,7 +55,7 @@ function Aside() {
         "
         aria-label="Categories"
       >
-        <ul className="space-y-6">
+        <ul className="space-y-6 pl-1">
           {SIDEBAR.map((item) => (
             <li key={item.title}>
               <h5
@@ -103,8 +103,8 @@ function Aside() {
                             rounded
 
                             outline-none
-                            focus:ring-2
-                            focus:ring-blue-600
+                            focus-visible:ring-2
+                            focus-visible:ring-blue-600
                             
                             hover:text-blue-600
                             dark:hover:bg-blue-400/10

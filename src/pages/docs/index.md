@@ -1,37 +1,30 @@
 ---
-title: Getting Started
-description: Build acessible and beautiful interfaces.
-source: true #show source code button
+title: Overview
+description: All you need to start documenting your project..
 ---
 
-## Installation
+## Why?
 
-To use Galaxy UI in your _project_, run one of **the following** commands in your terminal:
+Sometimes creating a documentation website is an exhausting task or spent much time, this template offers all nextjs features and some non-opinionated decisions to improve the developer experience:
 
-```bash {% highlight="{0,1,2}" %}
-yarn add @galaxy-ui/react
-```
+- editor config
+- prettier
+- husky
+- commitlint
+- git actions
+- path mapping
 
-{% callout appearance="caution" %}
-I have a **message** for you
-{% /callout %}
+## Features
 
-{% callout appearance="danger" %}
-I have a [message]() for you
-{% /callout %}
+- Callout
+- Tabs
+- Code Highlighting
+- SEO-friendly
+- Mobile-friendly
 
-{% callout appearance="info" %}
-I have a message for you
-{% /callout %}
+## Built with
 
-{% callout appearance="tip" %}
-I have a message for you
-{% /callout %}
-
-{% callout appearance="note" %}
-I have a _message_ for you
-{% /callout %}
-
-{% callout title="Custom title" %}
-I have a message for you
-{% /callout %}
+- [Nextjs](https://nextjs.org/)
+- [Markdoc](https://markdoc.io/)
+- [Headless UI](https://headlessui.com/)
+- [Tailwind](https://tailwindcss.com/)

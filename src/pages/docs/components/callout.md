@@ -17,12 +17,14 @@ content
 
 ## Examples
 
+Semantically designed
+
 {% callout appearance="caution" %}
-I have a **message** for you
+I have a message for you
 {% /callout %}
 
 {% callout appearance="danger" %}
-I have a [message]() for you
+I have a message for you
 {% /callout %}
 
 {% callout appearance="info" %}
@@ -34,7 +36,7 @@ I have a message for you
 {% /callout %}
 
 {% callout appearance="note" %}
-I have a _message_ for you
+I have a message for you
 {% /callout %}
 
 ## Specifying title

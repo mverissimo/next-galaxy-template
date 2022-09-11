@@ -1,9 +1,11 @@
 ---
 title: Tabs
-description: Easily create accessible, fully customizable tab interfaces, with robust focus management and keyboard navigation support.
+description: Easily create tabs.
 ---
 
-## Markup
+## Usage
+
+This component was extended from [headlessui](https://headlessui.com/react/tabs), built on top of markdoc.
 
 {% markdoc %}
 
@@ -32,6 +34,8 @@ description: Easily create accessible, fully customizable tab interfaces, with r
 
 ## Examples
 
+Default
+
 {% tab-group %}
 
 {% tab-list %}
@@ -51,7 +55,7 @@ yarn add react
 
 {% /tab-group %}
 
-## Fences
+With code
 
 {% tab-group %}
 

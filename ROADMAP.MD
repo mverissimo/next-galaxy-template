@@ -27,7 +27,8 @@
 [x] Fence(code syntax)
 [x] Pagination
 [x] Table of contents
-[ ] Tabs
+[x] Skip to content
+[x] Tabs
 [x] Callout
 [ ] Button
 [ ] Code preview

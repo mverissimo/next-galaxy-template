@@ -11,7 +11,7 @@ function Aside() {
       className="
         hidden
 
-        z-20
+        z-10
 
         fixed
         inset-0
@@ -100,15 +100,11 @@ function Aside() {
 
                             rounded
 
-                            hover:bg-gray-50
-                            hover:text-gray-600
-
+                            hover:text-blue-600
                             dark:hover:bg-blue-400/10
 
                             aria-current-page:bg-blue-50
-                            aria-current-page:border-l-2
-                            aria-current-page:text-blue-500
-                            aria-current-page:border-l-blue-500
+                            aria-current-page:text-blue-600
                           "
                         >
                           {title}

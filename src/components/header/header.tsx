@@ -8,7 +8,7 @@ function Header() {
       className="
         sticky
         top-0
-        z-50
+        z-20
 
         flex
         flex-none

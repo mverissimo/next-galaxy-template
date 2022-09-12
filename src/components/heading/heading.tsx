@@ -47,9 +47,11 @@ function Heading(props: HeadingProps) {
             h-6
 
             text-slate-400
+
             ring-1
             ring-slate-900/5
 
+            bg-white
             rounded-md
 
             outline-none
@@ -63,6 +65,10 @@ function Heading(props: HeadingProps) {
             hover:ring-slate-900/10
             hover:shadow
             hover:text-slate-700
+
+            dark:text-white
+            dark:bg-gray-600/10
+            dark:focus:ring-blue-600/50
           "
         >
           <HashtagIcon width={12} height={12} />

@@ -76,7 +76,7 @@ function DocsLayout(props: DocsLayoutProps) {
           >
             {markdoc?.frontmatter.description}
           </p>
-          <hr className="block my-12 bg-gray-200" />
+          <hr className="block my-12 border-gray-200 dark:border-gray-600" />
         </header>
 
         {children}

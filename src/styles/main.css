@@ -40,7 +40,8 @@ pre[class*='language-'] {
     font-mono
     leading-6
     
-    !bg-gray-800;
+  !bg-gray-800
+  dark:!bg-gray-600/10;
 
   ::selection,
   &::selection {

@@ -31,7 +31,7 @@ function Pagination() {
               w-full
 
               text-right
-              text-gray-700
+              text-slate-700
 
               border
               border-gray-100
@@ -46,8 +46,14 @@ function Pagination() {
               focus:border-blue-200
               focus:outline-none
 
+              dark:focus:ring-blue-600
+              dark:focus:border-blue-600
+
               hover:border-gray-200
               hover:bg-gray-50
+
+              dark:border-gray-800
+              dark:hover:bg-gray-900
             "
           >
             <ChevronLeftIcon
@@ -65,7 +71,7 @@ function Pagination() {
                   block
 
                   text-xs
-                  text-gray-500
+                  text-slate-500
                 "
               >
                 previous
@@ -75,7 +81,8 @@ function Pagination() {
                   block
 
                   text-base
-                  text-gray-700
+                  text-slate-600
+                  dark:text-slate-500
 
                   md:text-lg
 
@@ -105,7 +112,7 @@ function Pagination() {
               w-full
 
               text-left
-              text-gray-700
+              text-slate-700
 
               border
               border-gray-100
@@ -120,8 +127,14 @@ function Pagination() {
               focus:border-blue-200
               focus:outline-none
 
+              dark:focus:ring-blue-600
+              dark:focus:border-blue-600
+
               hover:border-gray-200
               hover:bg-gray-50
+
+              dark:border-gray-800
+              dark:hover:bg-gray-900
             "
           >
             <div>
@@ -130,7 +143,7 @@ function Pagination() {
                   block
 
                   text-xs
-                  text-gray-500
+                  text-slate-500
                 "
               >
                 next
@@ -140,7 +153,8 @@ function Pagination() {
                   block
 
                   text-base
-                  text-gray-700
+                  text-slate-600
+                  dark:text-slate-500
 
                   lg:text-lg
 

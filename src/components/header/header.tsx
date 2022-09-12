@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
-const Burger = dynamic(() => import('./burger'));
+import { SelectTheme } from './select-theme';
 
-// import { SelectTheme } from './select-theme';
+const Burger = dynamic(() => import('./burger'));
 
 function Header() {
   return (
@@ -67,7 +67,8 @@ function Header() {
             🔮 Galaxy
           </Link>
         </div>
-        {/* <SelectTheme /> */}
+
+        <SelectTheme />
       </div>
     </header>
   );

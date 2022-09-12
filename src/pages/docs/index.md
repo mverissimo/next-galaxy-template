@@ -22,6 +22,7 @@ Sometimes creating a documentation website is an exhausting task or spent much t
 - SEO-friendly
 - Mobile-friendly
 - Variable fonts
+- Dark mode
 
 ## Built with
 

@@ -42,7 +42,7 @@
 
 ## Others
 
-[ ] Darkmode
+[x] Darkmode
 [ ] Themes
 
 ## Marketing

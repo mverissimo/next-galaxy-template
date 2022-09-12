@@ -25,12 +25,16 @@ function Aside() {
         self-end
         bg-white
 
+        backdrop-blur
+        dark:supports-backdrop-blur:bg-gray-900/70
+
         lg:sticky
         lg:block
         lg:w-64
         2xl:w-64
         lg:h-auto
         lg:bg-transparent
+        lg:dark:bg-transparent
       "
     >
       <nav
@@ -51,7 +55,7 @@ function Aside() {
           lg:pr-6
           lg:py-12
 
-          dark:bg-gray-900
+          dark:bg-transparent
         "
         aria-label="Categories"
       >
@@ -99,6 +103,7 @@ function Aside() {
                             text-sm
                             text-slate-500
                             dark:text-slate-400
+                            dark:hover:text-blue-600
 
                             rounded
 
@@ -107,10 +112,12 @@ function Aside() {
                             focus-visible:ring-blue-600
                             
                             hover:text-blue-600
-                            dark:hover:bg-blue-400/10
 
                             aria-current-page:bg-blue-50
                             aria-current-page:text-blue-600
+
+                            dark:aria-current-page:text-blue-500
+                            dark:aria-current-page:bg-blue-400/10
                           "
                         >
                           {title}

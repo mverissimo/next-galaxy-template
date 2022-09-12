@@ -43,15 +43,15 @@ function Burger() {
         appearance-none 
         select-none
 
-        active:bg-gray-200 
-
         focus:ring-2 
         focus:ring-blue-600 
         focus:outline-none 
-        focus:bg-gray-100 
+        focus:bg-gray-100
 
-        hover:bg-gray-100 
-        hover:text-gray-600
+        dark:text-white
+        dark:bg-gray-900
+        dark:border-gray-800
+        dark:focus-visible:border-blue-500
       "
       onClick={() => setActive((prev) => !prev)}
     >

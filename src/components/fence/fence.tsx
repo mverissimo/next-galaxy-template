@@ -114,7 +114,7 @@ function Fence(props: FenceProps) {
           p-1
           text-white
 
-          bg-slate-600
+          bg-gray-600
           rounded
 
           transition
@@ -128,7 +128,10 @@ function Fence(props: FenceProps) {
           focus:outline-none
 
           hover:text-slate-200
-          hover:bg-slate-700
+          hover:bg-gray-700
+          
+          dark:bg-gray-600/20
+          dark:hover:bg-gray-700/10
         "
         onClick={setCopied}
         title={isCopied ? 'copied' : 'copy'}

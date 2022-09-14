@@ -22,8 +22,8 @@ function Tab(props: TabProps) {
           'rounded-md select-none',
           'focus:outline-none',
           selected
-            ? 'text-slate-900 backdrop-blur supports-backdrop-blur:bg-gray-200/50'
-            : 'text-slate-400 hover:text-slate-900',
+            ? 'text-slate-900 dark:text-slate-100 backdrop-blur bg-gray-200/50 dark:bg-gray-600/10'
+            : 'text-slate-400 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-600',
           disabled && 'text-slate-300 pointer-events-none'
         )
       }

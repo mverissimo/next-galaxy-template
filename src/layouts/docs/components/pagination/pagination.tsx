@@ -31,10 +31,11 @@ function Pagination() {
               w-full
 
               text-right
-              text-slate-700
+              text-slate-600
+              dark:text-slate-100
 
               border
-              border-gray-100
+              border-gray-200
               border-solid
               rounded-md
 
@@ -52,7 +53,7 @@ function Pagination() {
               hover:border-gray-200
               hover:bg-gray-50
 
-              dark:border-gray-800
+              dark:border-gray-700
               dark:hover:bg-gray-900
             "
           >
@@ -71,7 +72,7 @@ function Pagination() {
                   block
 
                   text-xs
-                  text-slate-500
+                  text-slate-400
                 "
               >
                 previous
@@ -82,7 +83,7 @@ function Pagination() {
 
                   text-base
                   text-slate-600
-                  dark:text-slate-500
+                  dark:text-slate-100
 
                   md:text-lg
 
@@ -112,10 +113,11 @@ function Pagination() {
               w-full
 
               text-left
-              text-slate-700
+              text-slate-600
+              dark:text-slate-100
 
               border
-              border-gray-100
+              border-gray-200
               border-solid
               rounded-md
 
@@ -133,7 +135,7 @@ function Pagination() {
               hover:border-gray-200
               hover:bg-gray-50
 
-              dark:border-gray-800
+              dark:border-gray-700
               dark:hover:bg-gray-900
             "
           >
@@ -143,7 +145,7 @@ function Pagination() {
                   block
 
                   text-xs
-                  text-slate-500
+                  text-slate-400
                 "
               >
                 next
@@ -154,7 +156,7 @@ function Pagination() {
 
                   text-base
                   text-slate-600
-                  dark:text-slate-500
+                  dark:text-slate-100
 
                   lg:text-lg
 

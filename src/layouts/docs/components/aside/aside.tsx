@@ -31,7 +31,6 @@ function Aside() {
         lg:sticky
         lg:block
         lg:w-64
-        2xl:w-64
         lg:h-auto
         lg:bg-transparent
         lg:dark:bg-transparent
@@ -40,7 +39,6 @@ function Aside() {
       <nav
         className="
           h-[calc(100%-64px)]
-          max-w-2xl
 
           px-4
           py-8

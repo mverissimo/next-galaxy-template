@@ -19,18 +19,17 @@ function TableOfContents(props: TableOfContentsProps) {
   }
 
   return (
-    <aside>
+    <aside className="sticky inset-0 w-64 h-full">
       <div
         className="
           hidden
 
           sticky
-          top-20
+          top-64
         
-          w-64
           py-12
 
-          2xl:block
+          lg:block
         "
       >
         <h2

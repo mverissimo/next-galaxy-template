@@ -9,7 +9,10 @@ function TabList(props: TabListProps) {
   let { children, ...rest } = props;
 
   return (
-    <Tab.List className="p-2 bg-gray-50 rounded-t-md" {...rest}>
+    <Tab.List
+      className="p-2 bg-gray-50 dark:bg-gray-400/10 rounded-t-md"
+      {...rest}
+    >
       {children}
     </Tab.List>
   );

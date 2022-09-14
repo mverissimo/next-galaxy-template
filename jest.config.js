@@ -14,7 +14,7 @@ const config = {
   coverageDirectory: '<rootDir>/coverage',
   coverageReporters: ['cobertura'],
   collectCoverageFrom: [
-    '<rootDir>/src/@(components|hooks|pages|styles|utils)/**/*.{ts,tsx}',
+    '<rootDir>/src/@(components|utils)/**/*.{ts,tsx}',
     '!<rootDir>/src/**/index.{ts,tsx,js,jsx}',
     '!**/*.d.ts',
     '!.jest/**',

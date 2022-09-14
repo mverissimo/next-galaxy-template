@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
+    "test:ci": "jest --ci --coverage --runInBand",
     "typescript": "tsc --noEmit",
     "commit": "cz"
   },

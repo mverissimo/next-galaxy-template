@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 
 import { Callout } from '.';
 
@@ -8,11 +7,11 @@ describe('@components: Callout', () => {
     let title = 'Custom title';
 
     render(
-      <Callout title={title} data-testid="Callout">
-        Callout
+      <Callout title={title}>
+        <span>Callout</span>
       </Callout>
     );
 
-    expect(screen.getByTestId('Callout')).toHaveTextContent(title);
+    expect(screen.getByText(title)).toHaveTextContent(title);
   });
 });

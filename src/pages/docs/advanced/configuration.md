@@ -27,3 +27,7 @@ export const SIDEBAR = [
 ### Edit page
 
 Every page has a button `Edit this page on GitHub`, so don't forget to set the repository url
+
+### Redirects
+
+On `nextconfig` has a redirect to `/docs`, if need a index remove them.

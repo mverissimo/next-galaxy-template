@@ -7,4 +7,13 @@ module.exports = withMarkdoc({
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['md', 'mdoc', 'ts', 'tsx'],
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/docs',
+        permanent: true,
+      },
+    ];
+  },
 });

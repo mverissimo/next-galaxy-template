@@ -8,9 +8,9 @@ export default function Document() {
         className="
           bg-gradient-to-r
 
-        dark:from-blue-900/5
-        dark:via-purple-600/5
-        dark:to-blue-600/5
+        dark:from-blue-900/10
+        dark:via-purple-800/10
+        dark:to-blue-600/10
         "
       >
         <Main />

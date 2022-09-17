@@ -35,13 +35,16 @@ pre[class*='language-'] {
 
   @apply text-left
     text-sm
-    !text-white
+  !text-white
 
     font-mono
     leading-6
+
+    dark:border
+  dark:border-gray-100/5
     
   !bg-gray-800
-  dark:!bg-black;
+  dark:!bg-gray-700/5;
 
   ::selection,
   &::selection {

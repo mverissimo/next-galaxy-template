@@ -10,7 +10,7 @@ function TabList(props: TabListProps) {
 
   return (
     <Tab.List
-      className="p-2 bg-gray-50 dark:bg-gray-800 rounded-t-md"
+      className="p-2 bg-gray-50 dark:bg-gray-500/10 rounded-t-md"
       {...rest}
     >
       {children}

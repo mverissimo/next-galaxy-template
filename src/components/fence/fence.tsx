@@ -84,8 +84,6 @@ function Fence(props: FenceProps) {
               const lineProps = getLineProps({ line, key: index });
 
               if (shouldHighlightLine(index)) {
-                console.log('opa');
-
                 lineProps.className = `${lineProps.className} -mx-4 pl-3 pr-4 border-l-4 border-blue-600 bg-blue-300/10`;
               }
 

@@ -54,7 +54,7 @@ function Pagination() {
               hover:bg-gray-50
 
               dark:border-gray-700
-              dark:hover:bg-gray-900
+              dark:border-gray-100/5
             "
           >
             <ChevronLeftIcon
@@ -135,7 +135,7 @@ function Pagination() {
               hover:border-gray-200
               hover:bg-gray-50
 
-              dark:border-gray-700
+              dark:border-gray-100/5
               dark:hover:bg-gray-800/10
             "
           >

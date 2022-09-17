@@ -136,7 +136,7 @@ function Pagination() {
               hover:bg-gray-50
 
               dark:border-gray-700
-              dark:hover:bg-gray-900
+              dark:hover:bg-gray-800/10
             "
           >
             <div>

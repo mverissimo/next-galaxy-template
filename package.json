@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.12",
-    "@headlessui/react": "^1.7.1",
+    "@headlessui/react": "^1.7.2",
     "@heroicons/react": "^2.0.11",
     "@markdoc/next.js": "^0.1.6",
     "copy-to-clipboard": "^3.3.2",
@@ -38,7 +38,7 @@
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
-    "autoprefixer": "^10.4.10",
+    "autoprefixer": "^10.4.11",
     "cssnano": "^5.1.13",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.23.1",

@@ -26,10 +26,10 @@ function Header() {
         border-gray-200
 
         backdrop-blur
-        supports-backdrop-blur:bg-white/60
+        supports-backdrop-blur:bg-white/80
 
         dark:border-gray-800
-        dark:supports-backdrop-blur:bg-gray-900/70
+        dark:supports-backdrop-blur:bg-gray-900/80
       "
     >
       <div

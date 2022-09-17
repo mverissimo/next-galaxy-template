@@ -115,7 +115,7 @@ function Aside() {
                             aria-current-page:text-blue-600
 
                             dark:aria-current-page:text-blue-500
-                            dark:aria-current-page:bg-blue-400/10
+                            dark:aria-current-page:bg-blue-600/10
                           "
                         >
                           {title}

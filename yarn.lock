@@ -1354,10 +1354,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.12.tgz#a6236379bf710658db048d7087ec588754962cb6"
   integrity sha512-bGKk4/8tube/nCk8hav0ZDBVbzJzc7m0Vt4xF5p15IN4YImwGdtKG38Oq5bU8xHNS+VfvbFFCepgQNj7Pr/Lvg==
 
-"@headlessui/react@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.1.tgz#39c1b14b2e92d2edb32dd07722a8783a12d0d0be"
-  integrity sha512-vnRlB71kvEr3y26Lm1WpCiMML8n5JcJ7jK5+vaF0hGTZFArW206j61meVemXkTOuGLhmyWe6yj3OETzsxHoryQ==
+"@headlessui/react@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.2.tgz#e6a6a8d38342064a53182f1eb2bf6d9c1e53ba6a"
+  integrity sha512-snLv2lxwsf2HNTOBNgHYdvoYZ3ChJE8QszPi1d/hl9js8KrFrUulTaQBfSyPbJP5BybVreWh9DxCgz9S0Z6hKQ==
 
 "@heroicons/react@^2.0.11":
   version "2.0.11"
@@ -2417,10 +2417,10 @@ at-least-node@^1.0.0:
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
-autoprefixer@^10.4.10:
-  version "10.4.10"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.10.tgz#a1d8891d1516155eb13a772b1289efdc61de14ef"
-  integrity sha512-nMaiDARyp1e74c8IeAXkr+BmFKa8By4Zak7tyaNPF09Iu39WFpNXOWrVirmXjKr+5cOyERwvtbMOLYz6iBJYgQ==
+autoprefixer@^10.4.11:
+  version "10.4.11"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.11.tgz#835136aff1d9cd43640151e0d2dba00f8eac7c1c"
+  integrity sha512-5lHp6DgRodxlBLSkzHOTcufWFflH1ewfy2hvFQyjrblBFlP/0Yh4O/Wrg4ow8WRlN3AAUFFLAQwX8hTptzqVHg==
   dependencies:
     browserslist "^4.21.3"
     caniuse-lite "^1.0.30001399"

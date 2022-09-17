@@ -108,7 +108,8 @@ function Aside() {
                             outline-none
                             focus-visible:ring-2
                             focus-visible:ring-blue-600
-                            
+                            dark:focus-visible:ring-blue-600/50
+
                             hover:text-blue-600
 
                             aria-current-page:bg-blue-50

@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    @apply scroll-smooth;
+  }
+
+  :target {
+    @apply scroll-m-28;
+  }
+}
+
+article {
+  @apply w-full 
+    max-w-none
+    
+    prose
+    prose-slate
+    
+    dark:prose-invert;
+}
+
+pre[class*='language-'] {
+  @apply relative
+    overflow-auto
+    p-4;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  tab-size: 4;
+  hyphens: none;
+
+  @apply text-left
+    text-sm
+  !text-white
+
+    font-mono
+    leading-6
+
+    dark:border
+  dark:border-gray-100/5
+    
+  !bg-gray-800
+  dark:!bg-gray-700/5;
+
+  ::selection,
+  &::selection {
+    @apply bg-stone-800;
+  }
+}

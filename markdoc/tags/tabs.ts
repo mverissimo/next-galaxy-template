@@ -2,7 +2,7 @@ import type { MarkdocNextJsSchema } from '@markdoc/next.js';
 
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@/components/tabs';
 
-export const group: MarkdocNextJsSchema = {
+export const tabGroup: MarkdocNextJsSchema = {
   render: TabGroup,
   attributes: {
     defaultIndex: {
@@ -11,7 +11,7 @@ export const group: MarkdocNextJsSchema = {
   },
 };
 
-export const list: MarkdocNextJsSchema = {
+export const tabList: MarkdocNextJsSchema = {
   render: TabList,
   attributes: {
     'aria-label': {
@@ -36,11 +36,11 @@ export const tab: MarkdocNextJsSchema = {
   },
 };
 
-export const panels: MarkdocNextJsSchema = {
+export const tabPanels: MarkdocNextJsSchema = {
   render: TabPanels,
 };
 
-export const panel: MarkdocNextJsSchema = {
+export const tabPanel: MarkdocNextJsSchema = {
   render: TabPanel,
   attributes: {
     language: {
@@ -48,12 +48,3 @@ export const panel: MarkdocNextJsSchema = {
     },
   },
 };
-
-// // eslint-disable-next-line import/no-anonymous-default-export
-// export default {
-//   'tab-group': group,
-//   tab,
-//   'tab-list': list,
-//   'tab-panels': panels,
-//   'tab-panel': panel,
-// };

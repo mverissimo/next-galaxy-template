@@ -2,7 +2,6 @@ import React from 'react';
 import type { ReactNode } from 'react';
 
 import { Tab } from '@headlessui/react';
-
 import { cn } from '@/utils/classnames';
 
 export interface TabPanelProps {

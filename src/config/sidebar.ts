@@ -26,6 +26,10 @@ export const SIDEBAR: Array<SidebarItem> = [
         slug: '/docs/components/callout',
       },
       {
+        title: 'Disclosure',
+        slug: '/docs/components/disclosure',
+      },
+      {
         title: 'Tabs',
         slug: '/docs/components/tabs',
       },

@@ -18,14 +18,18 @@ interface MyAppProps extends AppProps {
 }
 
 function MyApp(props: MyAppProps) {
-  const { Component, pageProps, router } = props;
+  let { Component, pageProps, router } = props;
 
-  const isDocs = router.asPath.startsWith('/docs');
+  let isDocs = router.asPath.startsWith('/docs');
+
+  let TITLE = pageProps.markdoc?.frontmatter.title;
+  let DESCRIPTION = pageProps.markdoc?.frontmatter.description;
+  let SITE = 'https://next-galaxy-starter.vercel.app';
 
   return (
     <React.Fragment>
       <Head>
-        <title>{`${pageProps.markdoc?.frontmatter.title} - Galaxy template`}</title>
+        <title>{`${TITLE} - Galaxy template`}</title>
 
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -33,34 +37,21 @@ function MyApp(props: MyAppProps) {
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1"
         />
-        <meta
-          name="description"
-          content={pageProps.markdoc?.frontmatter.description}
-        />
+        <meta name="description" content={DESCRIPTION} />
 
+        {/*<!-- Twitter Meta Tags -->*/}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@mverissimu" />
-        <meta
-          name="twitter:title"
-          content={pageProps.markdoc?.frontmatter.title}
-        />
-        <meta
-          name="twitter:description"
-          content={pageProps.markdoc?.frontmatter.description}
-        />
+        <meta name="twitter:site" content={SITE} />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESCRIPTION} />
         <meta name="twitter:image" content="/image.png" />
         <meta name="twitter:creator" content="@mverissimu" />
 
-        <meta property="og:url" content="" />
+        {/*<!-- Facebook Meta Tags -->*/}
+        <meta property="og:url" content={SITE} />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content={pageProps.markdoc?.frontmatter.title}
-        />
-        <meta
-          property="og:description"
-          content={pageProps.markdoc?.frontmatter.description}
-        />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESCRIPTION} />
         <meta property="og:image" content="/image.png" />
       </Head>
 

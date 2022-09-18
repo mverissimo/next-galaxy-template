@@ -37,6 +37,31 @@ function MyApp(props: MyAppProps) {
           name="description"
           content={pageProps.markdoc?.frontmatter.description}
         />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@mverissimu" />
+        <meta
+          name="twitter:title"
+          content={pageProps.markdoc?.frontmatter.title}
+        />
+        <meta
+          name="twitter:description"
+          content={pageProps.markdoc?.frontmatter.description}
+        />
+        <meta name="twitter:image" content="/image.png" />
+        <meta name="twitter:creator" content="@mverissimu" />
+
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content={pageProps.markdoc?.frontmatter.title}
+        />
+        <meta
+          property="og:description"
+          content={pageProps.markdoc?.frontmatter.description}
+        />
+        <meta property="og:image" content="/image.png" />
       </Head>
 
       <ThemeProvider attribute="class" disableTransitionOnChange enableSystem>

@@ -5,7 +5,6 @@ import {
   MoonIcon,
   SunIcon,
   ComputerDesktopIcon,
-  CheckIcon,
 } from '@heroicons/react/20/solid';
 
 import { useTheme } from 'next-themes';
@@ -47,18 +46,13 @@ export function SelectTheme() {
             inline-flex
             items-center
 
-            px-3
-            py-1.5
+            p-2.5
 
-            text-sm
-            text-slate-600
-            font-medium
-            capitalize
+            text-slate-500
 
             border
-            border-gray-300
+            border-gray-200
             rounded-lg
-            
             bg-white
 
             transition
@@ -78,9 +72,8 @@ export function SelectTheme() {
           "
         >
           {React.createElement(THEMES[currentTheme].icon, {
-            className: 'w-4 h-4 mr-1',
+            className: 'w-4 h-4',
           })}
-          {currentTheme}
         </Listbox.Button>
         <Transition
           as={React.Fragment}
@@ -110,7 +103,7 @@ export function SelectTheme() {
               focus:outline-none
 
               dark:bg-gray-800
-              dark:border-gray-700/50
+              dark:border-gray-100/5
             "
           >
             {Object.values(THEMES).map(({ id, name }) => (
@@ -129,7 +122,7 @@ export function SelectTheme() {
                   select-none
 
                   text-sm
-                  font-medium
+                  font-semibold
 
                   transition-colors
                   duration-300
@@ -140,19 +133,12 @@ export function SelectTheme() {
                   dark:bg-gray-800
                   ${
                     active
-                      ? 'text-blue-500 bg-slate-50 dark:bg-blue-500/10'
-                      : 'text-slate-500 bg-white dark:text-white'
+                      ? 'text-blue-600 bg-slate-50 dark:bg-blue-500/10'
+                      : 'text-slate-600 bg-white dark:text-white'
                   }
                 `}
               >
-                {({ selected }) => (
-                  <React.Fragment>
-                    {name}
-                    {selected ? (
-                      <CheckIcon className="h-4 w-4" aria-hidden="true" />
-                    ) : null}
-                  </React.Fragment>
-                )}
+                {name}
               </Listbox.Option>
             ))}
           </Listbox.Options>

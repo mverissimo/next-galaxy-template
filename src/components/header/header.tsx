@@ -14,7 +14,6 @@ function Header() {
         z-20
 
         flex
-        flex-none
 
         w-full
         h-[4rem]
@@ -29,7 +28,7 @@ function Header() {
         supports-backdrop-blur:bg-white/80
 
         dark:border-gray-800
-        dark:supports-backdrop-blur:bg-gray-900/80
+        dark:supports-backdrop-blur:bg-gray-900/25
       "
     >
       <div

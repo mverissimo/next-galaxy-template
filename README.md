@@ -1,8 +1,6 @@
 <div align="center"><strong>Non-opinionated TypeScript template starter for Next.js</strong></div>
 <div align="center">All you need to start documenting your project..</div>
 
-<br />
-
 ## Why?
 
 Sometimes creating a documentation website is an exhausting task or spent much time, this template offers all nextjs features and some non-opinionated decisions to improve the developer experience:
@@ -18,13 +16,14 @@ Sometimes creating a documentation website is an exhausting task or spent much t
 
 - Callout
 - Tabs
+- Disclosure
 - Code Highlighting
 - SEO-friendly
 - Mobile-friendly
 - Variable fonts
 - Dark mode
 
-### Commands
+## Commands
 
 | command | description                                           |
 | ------- | ----------------------------------------------------- |

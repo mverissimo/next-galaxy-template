@@ -3,7 +3,9 @@
 
 ## Why?
 
-Sometimes creating a documentation website is an exhausting task or spent much time, this template offers all nextjs features and some non-opinionated decisions to improve the developer experience:
+Sometimes creating a documentation website is an exhausting task or spent much time, this template offers all nextjs features and some non-opinionated decisions to improve the developer experience.
+
+## Tooling
 
 - editor config
 - prettier
@@ -15,9 +17,12 @@ Sometimes creating a documentation website is an exhausting task or spent much t
 ## Features
 
 - Callout
-- Tabs
 - Disclosure
+- Tabs
 - Code Highlighting
+
+## Performance & Design
+
 - SEO-friendly
 - Mobile-friendly
 - Variable fonts
@@ -32,3 +37,20 @@ Sometimes creating a documentation website is an exhausting task or spent much t
 | build   | creates the production build version                  |
 | lint    | runs the linter in all components and pages           |
 | test    | runs jest to test all components and pages            |
+
+## Deploy
+
+Deploy this template in one click:
+
+| Vercel | Netlify |
+| ------ | ------- |
+|[![Deploy](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/mverissimo/next-galaxy-starter)|[![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mverissimo/next-galaxy-starter)|
+
+## Built with 
+
+- [Nextjs](https://nextjs.org/)
+- [Markdoc](https://markdoc.io/)
+- [Headless UI](https://headlessui.com/)
+- [Tailwindcss](https://tailwindcss.com/)
+
+

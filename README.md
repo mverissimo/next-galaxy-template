@@ -38,19 +38,29 @@ Sometimes creating a documentation website is an exhausting task or spent much t
 | lint    | runs the linter in all components and pages           |
 | test    | runs jest to test all components and pages            |
 
+## Quick Start
+
+The best way to start with this template is using [Create Next App](https://nextjs.org/docs/api-reference/create-next-app)
+
+```bash
+# yarn
+yarn create next-app -e https://github.com/mverissimo/next-galaxy-starter
+
+#npm
+npx create next-app -e https://github.com/mverissimo/next-galaxy-starter
+```
+
 ## Deploy
 
 Deploy this template in one click:
 
-| Vercel | Netlify |
-| ------ | ------- |
-|[![Deploy](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/mverissimo/next-galaxy-starter)|[![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mverissimo/next-galaxy-starter)|
+| Vercel                                                                                                                                       | Netlify                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Deploy](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/mverissimo/next-galaxy-starter) | [![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mverissimo/next-galaxy-starter) |
 
-## Built with 
+## Built with
 
 - [Nextjs](https://nextjs.org/)
 - [Markdoc](https://markdoc.io/)
 - [Headless UI](https://headlessui.com/)
 - [Tailwindcss](https://tailwindcss.com/)
-
-

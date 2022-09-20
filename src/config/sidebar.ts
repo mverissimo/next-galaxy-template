@@ -16,10 +16,6 @@ export const SIDEBAR: Array<SidebarItem> = [
         title: 'Overview',
         slug: '/docs',
       },
-      {
-        title: 'aaaa',
-        slug: '/docs/components',
-      },
     ],
   },
 ];

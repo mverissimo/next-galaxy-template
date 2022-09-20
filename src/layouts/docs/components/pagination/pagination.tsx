@@ -72,7 +72,7 @@ function Pagination() {
                   block
 
                   text-xs
-                  text-slate-400
+                  text-slate-500
                 "
               >
                 previous
@@ -145,7 +145,7 @@ function Pagination() {
                   block
 
                   text-xs
-                  text-slate-400
+                  text-slate-500
                 "
               >
                 next

@@ -113,7 +113,7 @@ function Aside() {
                             hover:text-blue-600
 
                             aria-current-page:bg-blue-50
-                            aria-current-page:text-blue-600
+                            aria-current-page:text-blue-800
 
                             dark:aria-current-page:text-blue-500
                             dark:aria-current-page:bg-blue-600/10

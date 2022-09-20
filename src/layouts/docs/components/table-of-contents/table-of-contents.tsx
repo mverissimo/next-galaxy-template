@@ -63,7 +63,7 @@ function TableOfContents(props: TableOfContentsProps) {
 
                     ${
                       currentId === id
-                        ? 'text-blue-500 hover:text-blue-600'
+                        ? 'text-blue-800 hover:text-blue-900'
                         : 'text-slate-500 dark:text-slate-300 hover:text-slate-600 dark:hover:text-slate-400'
                     }
                   `}

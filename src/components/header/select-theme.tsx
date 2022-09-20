@@ -42,6 +42,7 @@ export function SelectTheme() {
     <Listbox value={theme} onChange={setTheme}>
       <div className="relative">
         <Listbox.Button
+          aria-label="Select theme"
           className="
             inline-flex
             items-center

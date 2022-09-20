@@ -82,7 +82,13 @@ function DocsLayout(props: DocsLayoutProps) {
         {children}
 
         <div className="mt-24">
-          <Link href={`${GITHUB_EDIT_URL}${router.pathname}.md`}>
+          <Link
+            href={`${GITHUB_EDIT_URL}${
+              router.pathname === '/docs'
+                ? `${router.pathname}/index`
+                : router.pathname
+            }.md`}
+          >
             <span className="flex items-center mb-6 cursor-pointer text-sm text-slate-600 dark:text-slate-400 hover:underline hover:text-slate-900">
               <PencilSquareIcon className="w-4 h-4 mr-2" />
               Edit this page on GitHub

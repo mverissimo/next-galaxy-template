@@ -12,7 +12,6 @@ function Pagination() {
       className="
         flex
         gap-4
-
         w-full
       "
     >
@@ -28,33 +27,36 @@ function Pagination() {
 
               py-4
               px-6
+
               w-full
 
               text-right
-              text-slate-600
-              dark:text-slate-100
+            text-slate-600
+            dark:text-slate-100
 
-              border
-              border-gray-200
-              border-solid
+            border
+            border-gray-200
+            hover:border-gray-200
+            dark:border-gray-100/5
+
+            bg-white
+            hover:bg-gray-50
+            active:bg-gray-100
+            dark:active:bg-gray-800/20
+            dark:hover:bg-gray-800/10
+            dark:bg-gray-800/5
+
               rounded-md
-
-              transition
+  
+              ease-in
               duration-150
-
+              transition-colors
+  
               focus:ring-2
-              focus:ring-blue-100
-              focus:border-blue-200
+            focus:ring-gray-100
+            focus:border-gray-200
               focus:outline-none
-
-              dark:focus:ring-blue-600
-              dark:focus:border-blue-600
-
-              hover:border-gray-200
-              hover:bg-gray-50
-
-              dark:border-gray-100/5
-              dark:hover:bg-gray-800/10
+            dark:focus:ring-gray-600/10
             "
           >
             <ChevronLeftIcon
@@ -84,10 +86,9 @@ function Pagination() {
                   text-base
                   text-slate-600
                   dark:text-slate-100
-
                   md:text-lg
-
                   font-semibold
+
                   line-clamp-1
                 "
               >
@@ -110,33 +111,36 @@ function Pagination() {
 
               py-4
               px-6
+
               w-full
 
               text-left
-              text-slate-600
-              dark:text-slate-100
+            text-slate-600
+            dark:text-slate-100
 
-              border
-              border-gray-200
-              border-solid
+            border
+            border-gray-200
+            hover:border-gray-200
+            dark:border-gray-100/5
+
+            bg-white
+            hover:bg-gray-50
+            active:bg-gray-100
+            dark:active:bg-gray-800/20
+            dark:hover:bg-gray-800/10
+            dark:bg-gray-800/5
+
               rounded-md
-
-              transition
+  
+              ease-in
               duration-150
-
+              transition-colors
+  
               focus:ring-2
-              focus:ring-blue-100
-              focus:border-blue-200
+            focus:ring-gray-100
+            focus:border-gray-200
               focus:outline-none
-
-              dark:focus:ring-blue-600
-              dark:focus:border-blue-600
-
-              hover:border-gray-200
-              hover:bg-gray-50
-
-              dark:border-gray-100/5
-              dark:hover:bg-gray-800/10
+            dark:focus:ring-gray-600/10
             "
           >
             <div>
@@ -157,7 +161,6 @@ function Pagination() {
                   text-base
                   text-slate-600
                   dark:text-slate-100
-
                   lg:text-lg
 
                   font-semibold

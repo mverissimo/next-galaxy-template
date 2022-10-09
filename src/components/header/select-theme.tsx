@@ -49,13 +49,21 @@ export function SelectTheme() {
 
             p-2.5
 
-            text-slate-500
+            text-sm
+            text-slate-600
+            hover:text-slate-700
+            dark:text-slate-300
+            dark:hover:text-slate-200
 
             border
-            border-gray-200
             rounded-lg
-            bg-white
 
+            bg-white
+            hover:bg-gray-50
+            dark:bg-gray-900
+            dark:hover:bg-gray-800
+
+            ease-in
             transition
             duration-150
 
@@ -63,11 +71,6 @@ export function SelectTheme() {
             focus-visible:ring-blue-500
             focus-visible:border-blue-500
             focus-visible:outline-none
-
-            hover:bg-slate-50
-
-            dark:text-white
-            dark:bg-gray-900
             dark:border-gray-800
             dark:focus-visible:border-blue-500
           "
@@ -86,25 +89,18 @@ export function SelectTheme() {
             className="
               absolute
               mt-1.5
-
               overflow-auto
-
-              w-28
+              w-32
               max-h-60
-
-              py-1.5
-
+              p-2
               border
               border-gray-200
               rounded-lg
               bg-white
-
-              shadow-xs
-
+              shadow-sm
               focus:outline-none
-
-              dark:bg-gray-800
-              dark:border-gray-100/5
+              dark:bg-gray-900
+              dark:border-gray-800
             "
           >
             {Object.values(THEMES).map(({ id, name }) => (
@@ -115,27 +111,18 @@ export function SelectTheme() {
                   flex
                   items-center
                   justify-between
-
-                  px-3
-                  py-1.5
-
+                  px-4
+                  py-2
+                  text-sm
+                  rounded-lg
                   cursor-pointer
                   select-none
-
-                  text-sm
-                  font-semibold
-
-                  transition-colors
                   duration-300
-
-                  hover:text-blue-500
-                  hover:bg-blue-50
-
-                  dark:bg-gray-800
+                  transition-colors
                   ${
                     active
-                      ? 'text-blue-600 bg-slate-50 dark:bg-blue-500/10'
-                      : 'text-slate-600 bg-white dark:text-white'
+                      ? 'text-blue-700 dark:text-blue-600 dark:hover:text-blye-300 bg-blue-50 dark:bg-blue-800/10'
+                      : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 bg-white hover:bg-gray-50 dark:bg-transparent'
                   }
                 `}
               >

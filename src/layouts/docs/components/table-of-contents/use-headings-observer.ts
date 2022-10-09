@@ -1,8 +1,10 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 export function useHeadingsObserver(): {
   currentId: string;
 } {
+  let router = useRouter();
   let listRef = React.useRef<IntersectionObserverEntry[]>([]);
   let [currentId, setCurrentId] = React.useState<string>('');
 
@@ -52,8 +54,16 @@ export function useHeadingsObserver(): {
 
     headings.forEach((element) => observer.observe(element));
 
-    return () => observer.disconnect();
-  }, []);
+    router.events.on('routeChangeComplete', () => {
+      headings.forEach((element) => observer.observe(element));
+    });
+
+    return () => {
+      router.events.off('routeChangeComplete', () => {
+        observer.disconnect();
+      });
+    };
+  }, [router]);
 
   return {
     currentId,

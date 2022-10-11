@@ -27,6 +27,7 @@ Sometimes creating a documentation website is an exhausting task or spent much t
 - Mobile-friendly
 - Variable fonts
 - Dark mode
+- New experimental [OG IMAGE](https://og-playground.vercel.app/) 🔥
 
 ## Commands
 

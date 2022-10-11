@@ -44,7 +44,6 @@ function MyApp(props: MyAppProps) {
         <meta name="twitter:site" content={SITE} />
         <meta name="twitter:title" content={TITLE} />
         <meta name="twitter:description" content={DESCRIPTION} />
-        <meta name="twitter:image" content="/image.png" />
         <meta name="twitter:creator" content="@mverissimu" />
 
         {/*<!-- Facebook Meta Tags -->*/}
@@ -52,7 +51,11 @@ function MyApp(props: MyAppProps) {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={TITLE} />
         <meta property="og:description" content={DESCRIPTION} />
-        <meta property="og:image" content="/image.png" />
+
+        <meta
+          property="og:image"
+          content={`https://next-galaxy-template.vercel.app/api/og?title=${TITLE}&${DESCRIPTION}`}
+        />
       </Head>
 
       <ThemeProvider attribute="class" disableTransitionOnChange enableSystem>

@@ -24,7 +24,7 @@ function MyApp(props: MyAppProps) {
 
   let TITLE = pageProps.markdoc?.frontmatter.title;
   let DESCRIPTION = pageProps.markdoc?.frontmatter.description;
-  let SITE = 'https://next-galaxy-starter.vercel.app';
+  let SITE = 'https://' + process.env.VERCEL_URL;
 
   return (
     <React.Fragment>
@@ -55,8 +55,10 @@ function MyApp(props: MyAppProps) {
         <meta
           property="og:image"
           content={`${
-            process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
-          }/api/og?title=${TITLE}&description=${DESCRIPTION}`}
+            process.env.VERCEL_URL ? SITE : ''
+          }/api/og?title=${encodeURIComponent(
+            TITLE
+          )}&description=${encodeURIComponent(DESCRIPTION)}`}
         />
       </Head>
 

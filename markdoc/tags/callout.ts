@@ -3,7 +3,6 @@ import type { MarkdocNextJsSchema } from '@markdoc/next.js';
 
 const callout: MarkdocNextJsSchema = {
   render: Callout,
-  selfClosing: true,
   children: ['paragraph', 'tag', 'list'],
   attributes: {
     appearance: {
@@ -13,9 +12,6 @@ const callout: MarkdocNextJsSchema = {
       errorLevel: 'critical',
     },
     title: {
-      type: String,
-    },
-    children: {
       type: String,
     },
   },

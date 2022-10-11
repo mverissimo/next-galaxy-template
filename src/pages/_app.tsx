@@ -54,7 +54,7 @@ function MyApp(props: MyAppProps) {
 
         <meta
           property="og:image"
-          content={`https://next-galaxy-template.vercel.app/api/og?title=${TITLE}&${DESCRIPTION}`}
+          content={`https://next-galaxy-preview.vercel.app/api/og?title=${TITLE}&description=${DESCRIPTION}`}
         />
       </Head>
 

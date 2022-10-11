@@ -54,7 +54,9 @@ function MyApp(props: MyAppProps) {
 
         <meta
           property="og:image"
-          content={`https://next-galaxy-preview.vercel.app/api/og?title=${TITLE}&description=${DESCRIPTION}`}
+          content={`${
+            process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
+          }/api/og?title=${TITLE}&description=${DESCRIPTION}`}
         />
       </Head>
 
